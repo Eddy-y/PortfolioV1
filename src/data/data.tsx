@@ -77,9 +77,9 @@ export const heroData: Hero = {
         I'm currently working and helping faculty with research at <strong className="text-stone-100">Texas A&M University - SA</strong> campus. 
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        In my free time, you'll see me playing <strong className="text-stone-100">Volleyball</strong>,
+        enjoying a <strong className="text-stone-100">Chess</strong> match, or definitely spending time with my{' '}
+        <strong className="text-stone-100">5 dogs</strong>.
       </p>
     </>
   ),
@@ -103,16 +103,16 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description: `My skills include data analysis, visualization and management. 
+  I have experience creating ETL pipelines, Power BI dashboards, and have built a Retrieval Augmented 
+  Generation (RAG) systems. I like to think of me as a cheerful individual who enjoys playing volleyball and going to the gym.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'San Antonio, Tx', Icon: MapIcon},
+    {label: 'Age', text: '22', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Mexican', Icon: FlagIcon},
+    {label: 'Interests', text: 'Volleyball, Chess, Board Games', Icon: SparklesIcon},
+    {label: 'Study', text: 'Texas A&M University - SA', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'Title IX Office at TAMUSA', Icon: BuildingOffice2Icon},
   ],
 };
 
