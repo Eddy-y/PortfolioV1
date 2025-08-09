@@ -13,7 +13,7 @@ import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
-import heroImage from '../images/header-background.webp';
+import heroImage from '../images/VolleyballBack.jpg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
@@ -25,8 +25,8 @@ import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
 import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
-import testimonialImage from '../images/testimonial.webp';
+import profilepic from '../images/me.jpg';
+import testimonialImage from '../images/Chess2.jpg';
 import {
   About,
   ContactSection,
@@ -69,13 +69,12 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `Hey! I'm Eddie`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        A <strong className="text-stone-100"> Computer Science student</strong> by day, and <strong className="text-stone-100">Data Analyst</strong> by night. 
+        I'm currently working and helping faculty with research at <strong className="text-stone-100">Texas A&M University - SA</strong> campus. 
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
@@ -261,6 +260,7 @@ export const portfolioItems: PortfolioItem[] = [
     url: 'https://reactresume.com',
     image: porfolioImage11,
   },
+  
 ];
 
 /**
