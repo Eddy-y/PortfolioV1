@@ -128,12 +128,12 @@ export const skills: SkillGroup[] = [
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
+        name: 'Spanish',
+        level: 10,
       },
       {
-        name: 'Spanish',
-        level: 3,
+        name: 'Japanese',
+        level: 2,
       },
     ],
   },
@@ -268,42 +268,76 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
+    date: 'December 2026',
+    location: 'Texas A&M University - SA',
+    title: 'Computer Science Bachelors',
     content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
+    date: 'July 2023',
+    location: 'Technological University of Leon',
+    title: 'Software Development Associate',
     content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'September 2024 - Present',
+    location: 'Texas A&M University - SA',
+    title: 'Title IX Website Manager',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Managed and updated office of Title IX website, including processing and reconciling expense reimbursements.
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'January 2024 - July 2024',
+    location: 'Forte Innovation Consulting',
+    title: 'AI Automation Developer',
     content: (
-      <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
-      </p>
+      <div>
+        <ul>
+          <li>Built a <strong>Retrieval Augmented Generation (RAG) system</strong> using OpenAI models, <strong> python, Pinecone, and Langchain</strong>. This system automated
+          project requirements estimation, which <strong>reduced</strong> the estimation process by <strong>90%</strong> and saved weeks
+          in the project flow.</li>
+          <li>Developed a <strong>custom AI assistant</strong> using OpenAI models, which provided real-time project updates and
+          insights to the team, improving communication and decision-making.</li>
+        </ul>
+        <p> This work got the initiative to integrate AI into enterprise workflows going, resulting in the company's first successful implementation of AI within project planning.</p>
+      </div>
     ),
   },
+  {
+    date: 'January 2023 - December 2023',
+    location: 'Forte Innovation Consulting',
+    title: 'Backend Developer',
+    content: (
+      <div>
+        <ul>
+          <li>Used machine learning models to generate predictions on machinery failure for a client, and created charts and visualizations to communicate the findings.</li>
+          <li>Helped developing a RESTful API for secure digital signature verification, which ensured document integrity.</li>
+          <li>Integrated the Interplanetary File System (IPFS) with AWS S3 and Lambda to enable decentralized and permanent file storage for NFT management.</li>
+        </ul>
+      </div>
+    ),
+  },
+  {
+    date: 'April 2022 - November 2022',
+    location: 'Forte Innovation Consulting',
+    title: 'Data Analyst Intern',
+    content: (
+      <div>
+        <ul>
+          <li>Automated 5+ ETL pipelines using Azure Data Factory and SQL Server, securing data from diverse sources.</li>
+          <li>Created a Power BI dashboard to visualize and analyze data from a client’s database, which helped identify trends and insights.</li>
+          <li>Developed and enhanced 10+ Power BI dashboards, providing performance insights into ticket resolution.</li>
+        </ul>
+      </div>
+    ),
+  },
+  
 ];
 
 /**

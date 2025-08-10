@@ -1,6 +1,6 @@
 import {FC, memo} from 'react';
 
-import {TimelineItem} from '../../../data/dataDef';
+import type {TimelineItem} from '../../../data/dataDef';
 
 const TimelineItem: FC<{item: TimelineItem}> = memo(({item}) => {
   const {title, date, location, content} = item;
@@ -14,7 +14,9 @@ const TimelineItem: FC<{item: TimelineItem}> = memo(({item}) => {
           <span className="flex-1 text-sm sm:flex-none">{date}</span>
         </div>
       </div>
-      {content}
+      <div className="prose prose-sm max-w-none text-gray-600 prose-ul:list-disc prose-ul:pl-4 prose-li:my-1">
+        {content}
+      </div>
     </div>
   );
 });
