@@ -11,8 +11,8 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
+{/*import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
+import TwitterIcon from '../components/Icon/TwitterIcon';*/}
 import heroImage from '../images/VolleyballBack.jpg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
@@ -44,8 +44,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: "Eddie's Resume Template",
+  description: "React Resume Site",
 };
 
 /**
@@ -138,6 +138,23 @@ export const skills: SkillGroup[] = [
     ],
   },
   {
+    name: 'Backend development',
+    skills: [
+      {
+        name: 'Python',
+        level: 8,
+      },
+      {
+        name: 'Java',
+        level: 6,
+      },
+      {
+        name: 'C#',
+        level: 4,
+      },
+    ],
+  },
+  {
     name: 'Frontend development',
     skills: [
       {
@@ -151,23 +168,6 @@ export const skills: SkillGroup[] = [
       {
         name: 'GraphQL',
         level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Backend development',
-    skills: [
-      {
-        name: 'Node.js',
-        level: 8,
-      },
-      {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
       },
     ],
   },
@@ -271,13 +271,18 @@ export const education: TimelineItem[] = [
     date: 'December 2026',
     location: 'Texas A&M University - SA',
     title: 'Computer Science Bachelors',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    content: <p>At TAMUSA, I was a member of the Honors Society and the Chess Club, and I also served as the captain of 
+      the men's volleyball team. My time there allowed me to broaden my horizons and explore new technologies and 
+      platforms, such as Azure, and dive into new concepts like machine learning.</p>,
   },
   {
     date: 'July 2023',
     location: 'Technological University of Leon',
     title: 'Software Development Associate',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    content: <p>At the Technological University of Leon, I mainly focused on developing several projects that gave me a
+      solid foundation for my understanding of fundamentals like databases and REST controllers, primarily using Java.
+      It was here, under the guidance of my ever so feared database professor and her challenging SQL assignments,
+      that I discovered my passion for working with data.</p>,
   },
 ];
 
@@ -370,27 +375,27 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: 'Feel free to shoot me an email. Lets connect!',
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'eduardolh383@gmail.com',
+      href: 'mailto:eduardolh383@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'San Antonio TX, USA',
+      href: 'https://www.google.ca/maps/place/San+Antonio,+TX/@29.4241219,-98.4936282,12z',
     },
     {
       type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: '@eddy_larah',
+      href: 'https://www.instagram.com/eddy_larah/',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'Eddy-y',
+      href: 'https://github.com/Eddy-y',
     },
   ],
 };
@@ -399,9 +404,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Eddy-y'},
+  /*{label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},*/
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/eduardo-lara-hurtado-612233281/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/eddy_larah/'},
+  /*{label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/Eddy_larah'},*/
 ];
