@@ -35,6 +35,7 @@ import {
   HomepageMeta,
   PortfolioItem,
   SkillGroup,
+  AdditionalSkillSection,
   Social,
   TestimonialSection,
   TimelineItem,
@@ -137,6 +138,23 @@ export const skills: SkillGroup[] = [
       },
     ],
   },
+    {
+    name: 'Soft',
+    skills: [
+      {
+        name: 'Communication',
+        level: 10,
+      },
+      {
+        name: 'Problem Solving',
+        level: 9,
+      },
+      {
+        name: 'Enthusiasm',
+        level: 10,
+      },
+    ],
+  },
   {
     name: 'Backend development',
     skills: [
@@ -155,40 +173,48 @@ export const skills: SkillGroup[] = [
     ],
   },
   {
-    name: 'Frontend development',
+    name: 'Data Management',
     skills: [
       {
-        name: 'React',
-        level: 9,
+        name: 'Pandas',
+        level: 8,
       },
       {
-        name: 'Typescript',
+        name: 'Numpy',
         level: 7,
       },
       {
-        name: 'GraphQL',
-        level: 6,
-      },
-    ],
-  },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
+        name: 'Pytorch',
         level: 3,
       },
     ],
   },
+
+  
 ];
+
+/**
+ * Skill Blocks section
+ */
+export const additionalSkills: AdditionalSkillSection = {
+  title: '',
+  skills: [
+    { name: 'Python', color: 'bg-green-500' },
+    { name: 'Java', color: 'bg-teal-500' },
+    { name: 'R', color: 'bg-amber-500' },
+    { name: 'Azure Data Factory', color: 'bg-purple-500' },
+    { name: 'SQL', color: 'bg-stone-500' },
+    { name: 'Microsoft Power BI', color: 'bg-cyan-500' },
+    { name: 'Pandas', color: 'bg-red-500' },
+    { name: 'Scikit-learn', color: 'bg-orange-600' },
+    { name: 'JavaScript', color: 'bg-cyan-400' },
+    { name: 'HTML/CSS', color: 'bg-orange-600' },
+    { name: 'AWS Lambda', color: 'bg-amber-500' },
+    { name: 'S3 Bucket', color: 'bg-slate-400' },
+    { name: 'Pinecone', color: 'bg-blue-600' },
+    { name: 'Git', color: 'bg-red-700' },
+  ],
+};
 
 /**
  * Portfolio section
@@ -271,18 +297,20 @@ export const education: TimelineItem[] = [
     date: 'December 2026',
     location: 'Texas A&M University - SA',
     title: 'Computer Science Bachelors',
-    content: <p>At TAMUSA, I was a member of the Honors Society and the Chess Club, and I also served as the captain of 
+    /*content: <p>At TAMUSA, I was a member of the Honors Society and the Chess Club, and I also served as the captain of 
       the men's volleyball team. My time there allowed me to broaden my horizons and explore new technologies and 
-      platforms, such as Azure, and dive into new concepts like machine learning.</p>,
+      platforms, such as Azure, and dive into new concepts like machine learning.</p>,*/
+      content:<p>4.0 GPA | Honors Society | Men's Volleyball Team Captain and Vicepresident | Chess Team Member | Research Assistant</p>,
   },
   {
     date: 'July 2023',
     location: 'Technological University of Leon',
     title: 'Software Development Associate',
-    content: <p>At the Technological University of Leon, I mainly focused on developing several projects that gave me a
+    /*content: <p>At the Technological University of Leon, I mainly focused on developing several projects that gave me a
       solid foundation for my understanding of fundamentals like databases and REST controllers, primarily using Java.
       It was here, under the guidance of my ever so feared database professor and her challenging SQL assignments,
-      that I discovered my passion for working with data.</p>,
+      that I discovered my passion for working with data.</p>,*/
+      content:<p>3.8 GPA | Men's Volleyball Team Subcaptain | Class Representative</p>,
   },
 ];
 
@@ -300,7 +328,7 @@ export const experience: TimelineItem[] = [
   {
     date: 'January 2024 - July 2024',
     location: 'Forte Innovation Consulting',
-    title: 'AI Automation Developer',
+    title: 'AI Automation Intern',
     content: (
       <div>
         <ul>
@@ -317,7 +345,7 @@ export const experience: TimelineItem[] = [
   {
     date: 'January 2023 - December 2023',
     location: 'Forte Innovation Consulting',
-    title: 'Backend Developer',
+    title: 'Backend Developer Intern',
     content: (
       <div>
         <ul>

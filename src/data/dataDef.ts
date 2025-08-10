@@ -74,6 +74,19 @@ export interface SkillGroup {
 }
 
 /**
+ * Skill blocks section
+ */
+export interface AdditionalSkill {
+  name: string;
+  color: string;
+}
+
+export interface AdditionalSkillSection {
+  title: string;
+  skills: AdditionalSkill[];
+}
+
+/**
  * Portfolio section
  */
 export interface PortfolioItem {

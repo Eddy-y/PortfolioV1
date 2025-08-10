@@ -1,10 +1,12 @@
 import {FC, memo} from 'react';
 
-import {education, experience, SectionId, skills} from '../../../data/data';
+import {education, experience, SectionId, skills, additionalSkills} from '../../../data/data';
 import Section from '../../Layout/Section';
 import ResumeSection from './ResumeSection';
 import {SkillGroup} from './Skills';
 import TimelineItem from './TimelineItem';
+import {AdditionalSkills} from './AdditionalSkills'; // Import the new component
+
 
 const Resume: FC = memo(() => {
   return (
@@ -27,6 +29,9 @@ const Resume: FC = memo(() => {
               <SkillGroup key={`${skillgroup.name}-${index}`} skillGroup={skillgroup} />
             ))}
           </div>
+        </ResumeSection>
+        <ResumeSection title="Stack">
+          <AdditionalSkills additionalSkills={additionalSkills} />
         </ResumeSection>
       </div>
     </Section>
