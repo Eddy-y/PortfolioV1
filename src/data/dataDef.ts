@@ -115,7 +115,7 @@ export interface TestimonialSection {
 }
 
 export interface Testimonial {
-  image?: string;
+  image?: string; 
   name: string;
   text: string;
 }
