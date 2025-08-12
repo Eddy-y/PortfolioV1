@@ -42,6 +42,7 @@ import {
   Social,
   TestimonialSection,
   TimelineItem,
+  MusicCarouselSection, // Import the new interface
 } from './dataDef';
 
 /**
@@ -64,6 +65,7 @@ export const SectionId = {
   Skills: 'skills',
   Stats: 'stats',
   Testimonials: 'testimonials',
+  Music: 'music',
 } as const;
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
@@ -437,3 +439,31 @@ export const socialLinks: Social[] = [
   {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/eddy_larah/'},
   /*{label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/Eddy_larah'},*/
 ];
+
+
+/**
+ * Music Carousel section
+ */
+export const musicCarouselData: MusicCarouselSection = {
+  title: 'My Favorite Songs',
+  songs: [
+    {
+      name: 'Levitating',
+      artist: 'Dua Lipa',
+      imageSrc: 'https://images.unsplash.com/photo-1601614051034-71d5b3641743?ixlib=rb-4.0.3',
+      spotifyUrl: 'https://open.spotify.com/track/39Lk2k9W1p6fA73E4VfQk2',
+    },
+    {
+      name: 'Blinding Lights',
+      artist: 'The Weeknd',
+      imageSrc: 'https://images.unsplash.com/photo-1596481745486-13a296e810a0?ixlib=rb-4.0.3',
+      spotifyUrl: 'https://open.spotify.com/track/0Vjksd8vP2W4sTzW1K4Y2D',
+    },
+    {
+      name: 'Shape of You',
+      artist: 'Ed Sheeran',
+      imageSrc: 'https://images.unsplash.com/photo-1620959146197-2b36e9d7d9b9?ixlib=rb-4.0.3',
+      spotifyUrl: 'https://open.spotify.com/track/7qiZfU4dY1lWllzX7mPBI3',
+    },
+  ],
+};

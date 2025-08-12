@@ -9,7 +9,9 @@ import Hero from '../components/Sections/Hero';
 import Portfolio from '../components/Sections/Portfolio';
 import Resume from '../components/Sections/Resume';
 import Testimonials from '../components/Sections/Testimonials';
-import {homePageMeta} from '../data/data';
+import MusicCarousel from '../components/Sections/Music'; // Import your new component
+import {homePageMeta, musicCarouselData} from '../data/data'; // Import data
+
 
 // eslint-disable-next-line react-memo/require-memo
 const Header = dynamic(() => import('../components/Sections/Header'), {ssr: false});
@@ -24,6 +26,7 @@ const Home: FC = memo(() => {
       <Resume />
       <Portfolio />
       <Testimonials />
+      <MusicCarousel musicCarouselData={musicCarouselData} /> {/* Use your new component */}
       <Contact />
       <Footer />
     </Page>

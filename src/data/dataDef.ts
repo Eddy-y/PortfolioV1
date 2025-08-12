@@ -125,6 +125,21 @@ export interface Testimonial {
 }
 
 /**
+ * Music Carousel section
+ */
+export interface Song {
+  name: string;
+  artist: string;
+  imageSrc: string | StaticImageData;
+  spotifyUrl: string;
+}
+
+export interface MusicCarouselSection {
+  title: string;
+  songs: Song[];
+}
+
+/**
  * Contact section
  */
 export interface ContactSection {
