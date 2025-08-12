@@ -404,11 +404,11 @@ export const contact: ContactSection = {
   headerText: 'Get in touch.',
   description: 'Feel free to shoot me an email. Lets connect!',
   items: [
-    {
-      type: ContactType.Email,
-      text: 'eduardolh383@gmail.com',
-      href: 'mailto:eduardolh383@gmail.com',
-    },
+    // {
+    //   type: ContactType.Email,
+    //   text: 'eduardolh383@gmail.com',
+    //   href: 'mailto:eduardolh383@gmail.com',
+    // },
     {
       type: ContactType.Location,
       text: 'San Antonio TX, USA',
