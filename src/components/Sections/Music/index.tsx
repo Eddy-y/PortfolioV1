@@ -26,7 +26,7 @@ const MusicCarousel: FC<{musicCarouselData: MusicCarouselSection}> = memo(({musi
 
   const songItems = useMemo(() => {
     return songs.map((song, index) => (
-      <SongItem key={index} song={song} totalSongs={songs.length} /> // Pass totalSongs as a prop
+      <SongItem key={index} song={song} />
     ));
   }, [songs]);
 
@@ -41,7 +41,7 @@ const MusicCarousel: FC<{musicCarouselData: MusicCarouselSection}> = memo(({musi
               'flex transition-transform duration-500 ease-in-out'
             )}
             style={{
-              width: `${songs.length * 100}%`,
+              width: `${songs.length * 100 / 2}%`,
               transform: `translateX(-${activeIndex * (100 / songs.length)}%)`
             }}>
             {songItems}
@@ -70,16 +70,17 @@ const MusicCarousel: FC<{musicCarouselData: MusicCarouselSection}> = memo(({musi
   );
 });
 
-const SongItem: FC<{song: Song; totalSongs: number}> = memo(({song, totalSongs}) => {
+const SongItem: FC<{song: Song}> = memo(({song}) => {
   return (
-    <a href={song.spotifyUrl} target="_blank" rel="noopener noreferrer" className="block p-4 flex-shrink-0" style={{width: `calc(100% / ${totalSongs})`}}>
-      <Image 
-        src={song.imageSrc} 
-        alt={song.name} 
-        width={300} 
-        height={300} 
-        className="rounded-lg shadow-lg mx-auto"
-      />
+    <a href={song.spotifyUrl} target="_blank" rel="noopener noreferrer" className="block p-4 flex-shrink-0" style={{width: `33.3333%`}}>
+      <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-xl">
+        <Image 
+          src={song.imageSrc} 
+          alt={song.name} 
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
       <div className="text-center mt-4 text-white">
         <p className="font-bold">{song.name}</p>
         <p className="text-sm">{song.artist}</p>
