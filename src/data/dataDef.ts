@@ -92,8 +92,10 @@ export interface AdditionalSkillSection {
 export interface PortfolioItem {
   title: string;
   description: string;
+  fullDescription: string;
   url: string;
   image: string | StaticImageData;
+  images: string[] | StaticImageData[];
 }
 
 /**
