@@ -94,8 +94,10 @@ export interface PortfolioItem {
   description: string;
   fullDescription: string;
   url: string;
+  slug: string;
   image: string | StaticImageData;
   images: string[] | StaticImageData[];
+  repoUrl: string; // Add this property for the new button
 }
 
 /**

@@ -227,50 +227,63 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Project title 1',
     description: 'Give a short description of your project here.',
-    fullDescription:'0',
+    fullDescription:'This is a test description',
     url: 'https://reactresume.com',
+    slug:'first',
     image: porfolioImage1,
-    images:[]
+    images:[porfolioImage1,porfolioImage2],
+    repoUrl:'https://www.linkedin.com/in/eduardo-lara-hurtado-612233281/'
   },
   {
     title: 'Project title 2',
     description: 'Give a short description of your project here.',
     fullDescription:'0',
     url: 'https://reactresume.com',
+    slug:'second',
     image: porfolioImage2,
-    images:[]
+    images:[],
+    repoUrl:''
+
   },
   {
     title: 'Project title 3',
     description: 'Give a short description of your project here.',
     fullDescription:'0',
     url: 'https://reactresume.com',
+    slug:'third',
     image: porfolioImage3,
-    images:[]
+    images:[],
+    repoUrl:''
   },
   {
     title: 'Project title 4',
     description: 'Give a short description of your project here.',
     fullDescription:'0',
     url: 'https://reactresume.com',
+    slug:'forth',
     image: porfolioImage4,
-    images:[]
+    images:[],
+    repoUrl:''
   },
   {
     title: 'Project title 5',
     description: 'Give a short description of your project here.',
     fullDescription:'0',
     url: 'https://reactresume.com',
+    slug:'fifth',
     image: porfolioImage5,
-    images:[]
+    images:[],
+    repoUrl:''
   },
   {
     title: 'Project title 6',
     description: 'Give a short description of your project here.',
     fullDescription:'0',
     url: 'https://reactresume.com',
+    slug:'sixth',
     image: porfolioImage6,
-    images:[]
+    images:[],
+    repoUrl:''
   },
   
 ];
