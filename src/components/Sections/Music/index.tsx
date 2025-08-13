@@ -29,6 +29,8 @@ const MusicCarousel: FC<{musicCarouselData: MusicCarouselSection}> = memo(({musi
       <SongItem key={index} song={song} />
     ));
   }, [songs]);
+  const itemsToShow = 3;
+  const transformValue = `translateX(-${(activeIndex * (100 / itemsToShow))}%)`;
 
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.Music}>
@@ -41,8 +43,8 @@ const MusicCarousel: FC<{musicCarouselData: MusicCarouselSection}> = memo(({musi
               'flex transition-transform duration-500 ease-in-out'
             )}
             style={{
-              width: `${songs.length * 100 / 2}%`,
-              transform: `translateX(-${activeIndex * (100 / songs.length)}%)`
+              width: `${songs.length * 100 / 4}%`,
+              transform: transformValue
             }}>
             {songItems}
           </div>
@@ -73,7 +75,7 @@ const MusicCarousel: FC<{musicCarouselData: MusicCarouselSection}> = memo(({musi
 const SongItem: FC<{song: Song}> = memo(({song}) => {
   return (
     <a href={song.spotifyUrl} target="_blank" rel="noopener noreferrer" className="block p-4 flex-shrink-0" style={{width: `33.3333%`}}>
-      <div className="relative w-full h-80 rounded-lg overflow-hidden shadow-xl">
+      <div className="relative w-full aspect-square rounded-lg overflow-hidden shadow-xl">
         <Image 
           src={song.imageSrc} 
           alt={song.name} 
