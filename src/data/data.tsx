@@ -14,12 +14,15 @@ import LinkedInIcon from '../components/Icon/LinkedInIcon';
 {/*import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';*/}
 import heroImage from '../images/VolleyballBack.jpg';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
-import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
+
+import RAG_img from '../images/portfolio/RAG.png';
+import estimator_img from '../images/portfolio/Estimator.png';
+import thunder_img from '../images/portfolio//Thunder.jpg';
+import thunder2_img from '../images/portfolio//Thunder2.jpg';
+import chucho_img from '../images/portfolio//Chucho.jpg';
+import chai_img from '../images/portfolio//Chai.jpg';
+
+
 import dieWithASmileImage from '../images/songs/DieWithASmile.png';
 import zenzenzenseImage from '../images/songs/Zenzenzense.jpg';
 import theNightsImage from '../images/songs/TheNights.jpg';
@@ -30,6 +33,11 @@ import testimonialImage from '../images/Chess2.jpg';
 import fuegoleonImage from '../images/quotes/fuegoleon.jpg';
 import morganFreemanImage from '../images/quotes/freeman.jpg';
 import violetEvergardenImage from '../images/quotes/violet.png';
+
+import Project1Description from '../components/Sections/Portfolio/ProjectDescriptions/RagProject';
+
+
+
 import {
   About,
   ContactSection,
@@ -227,66 +235,56 @@ export const additionalSkills: AdditionalSkillSection = {
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
+    title: 'Retrieval-augmented generation',
     description: 'Give a short description of your project here.',
-    fullDescription:'This is a test description',
-    url: 'https://reactresume.com',
+    fullDescription:<Project1Description />,
     slug:'first',
-    image: porfolioImage1,
-    images:[porfolioImage1,porfolioImage2],
-    repoUrl:'https://www.linkedin.com/in/eduardo-lara-hurtado-612233281/'
+    image: RAG_img,
+    images:[RAG_img,estimator_img],
+    repoUrl:'https://github.com/Eddy-y/RAG_PoC_Public'
   },
-  {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    fullDescription:'0',
-    url: 'https://reactresume.com',
-    slug:'second',
-    image: porfolioImage2,
-    images:[],
-    repoUrl:''
 
+  {
+    title: 'Thunder',
+    description: 'This is my First and Older Dog',
+    slug:'Thunder',
+    image: thunder2_img,
+    noClick: true,
+  },
+
+  {
+    title: 'Automated Project Estimator',
+    description: 'Give a short description of your project here.',
+    fullDescription:<Project1Description />,
+    slug:'Estimator',
+    image: estimator_img,
+    images:[estimator_img],
+    repoUrl:'https://github.com/Eddy-y/ProjectEstimatorPublic',
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    fullDescription:'0',
-    url: 'https://reactresume.com',
-    slug:'third',
-    image: porfolioImage3,
-    images:[],
-    repoUrl:''
+    title: 'Chucho',
+    description: 'This is my second Dog',
+    slug:'Chucho',
+    image: chucho_img,
+    noClick: true,
   },
   {
-    title: 'Project title 4',
+    title: 'Automated Project Estimator',
     description: 'Give a short description of your project here.',
-    fullDescription:'0',
-    url: 'https://reactresume.com',
-    slug:'forth',
-    image: porfolioImage4,
-    images:[],
-    repoUrl:''
+    fullDescription:<Project1Description />,
+    slug:'Estimator',
+    image: estimator_img,
+    images:[estimator_img],
+    repoUrl:'https://github.com/Eddy-y/RAG_PoC_Public',
   },
   {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    fullDescription:'0',
-    url: 'https://reactresume.com',
-    slug:'fifth',
-    image: porfolioImage5,
-    images:[],
-    repoUrl:''
+    title: 'Chai',
+    description: 'This is my third Dog',
+    slug:'Chai',
+    image: chai_img,
+    noClick: true,
   },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    fullDescription:'0',
-    url: 'https://reactresume.com',
-    slug:'sixth',
-    image: porfolioImage6,
-    images:[],
-    repoUrl:''
-  },
+  
   
 ];
 
