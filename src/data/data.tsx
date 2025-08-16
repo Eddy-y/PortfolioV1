@@ -20,11 +20,11 @@ import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
 import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
 import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
-// import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-// import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-// import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-// import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-// import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
+import dieWithASmileImage from '../images/songs/DieWithASmile.png';
+import zenzenzenseImage from '../images/songs/Zenzenzense.jpg';
+import theNightsImage from '../images/songs/TheNights.jpg';
+import testDriveImage from '../images/songs/TestDrive.jpg';
+
 import profilepic from '../images/me.jpg';
 import testimonialImage from '../images/Chess2.jpg';
 import fuegoleonImage from '../images/quotes/fuegoleon.jpg';
@@ -448,28 +448,28 @@ export const musicCarouselData: MusicCarouselSection = {
   title: 'My Favorite Songs',
   songs: [
     {
-      name: 'Levitating',
-      artist: 'Dua Lipa',
-      imageSrc: porfolioImage1,
-      spotifyUrl: 'https://open.spotify.com/track/39Lk2k9W1p6fA73E4VfQk2',
+      name: 'Die With A Smile',
+      artist: 'Lady Gaga & Bruno Mars',
+      imageSrc: dieWithASmileImage,
+      spotifyUrl: 'https://open.spotify.com/track/2plbrEY59IikOBgBGLjaoe?si=a095e43e64d64a86',
     },
     {
-      name: 'Levitatingd',
-      artist: 'Dua Lipa',
-      imageSrc: porfolioImage2,
-      spotifyUrl: 'https://open.spotify.com/track/39Lk2k9W1p6fA73E4VfQk2',
+      name: 'The Nights',
+      artist: 'Avicii',
+      imageSrc: theNightsImage,
+      spotifyUrl: 'https://open.spotify.com/track/0ct6r3EGTcMLPtrXHDvVjc?si=2b34ffe7cd294e70',
     },
     {
-      name: 'Levitatingf',
-      artist: 'Dua Lipa',
-      imageSrc: porfolioImage3,
-      spotifyUrl: 'https://open.spotify.com/track/39Lk2k9W1p6fA73E4VfQk2',
+      name: 'Test Drive',
+      artist: 'John Powell',
+      imageSrc: testDriveImage,
+      spotifyUrl: 'https://open.spotify.com/track/2QTDuJIGKUjR7E2Q6KupIh?si=27153db86c8b443e',
     },
     {
-      name: 'Levitatingg',
-      artist: 'Dua Lipa',
-      imageSrc: porfolioImage4,
-      spotifyUrl: 'https://open.spotify.com/track/39Lk2k9W1p6fA73E4VfQk2',
+      name: 'Zenzenzense',
+      artist: 'Radwimps',
+      imageSrc: zenzenzenseImage,
+      spotifyUrl: 'https://open.spotify.com/track/2DLrgv7HhJanCuD8L9uJLR?si=f89c59f4dba24dcc',
     },
     
   ],
