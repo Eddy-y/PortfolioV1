@@ -284,6 +284,16 @@ export const portfolioItems: PortfolioItem[] = [
     image: chai_img,
     noClick: true,
   },
+  {
+    title: 'Retrieval-augmented generation',
+    description: 'Give a short description of your project here.',
+    fullDescription:<Project1Description />,
+    slug:'first',
+    image: RAG_img,
+    images:[RAG_img,estimator_img],
+    repoUrl:'https://github.com/Eddy-y/RAG_PoC_Public'
+  },
+
   
   
 ];

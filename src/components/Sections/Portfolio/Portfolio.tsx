@@ -14,32 +14,52 @@ const Portfolio: FC = memo(() => {
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.Portfolio}>
       <div className="flex flex-col gap-y-8">
-        <h2 className="self-center text-xl font-bold text-white">Take A Look At My Projects (And Dogs)</h2>
-        <div className=" w-full columns-2 md:columns-3 lg:columns-4">
+        <h2 className="self-center text-xl font-bold text-white">Take a look at some of my projects (And Dogs)</h2>
+        {/* <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"> */}
+        <div className="w-full columns-1 md:columns-2 lg:columns-3">
           {portfolioItems.map((item, index) => {
-            const {title, image} = item;
-            return (
-              <div className="pb-6" key={`${title}-${index}`}>
-                <div
-                  className={classNames(
-                    'relative h-max w-full overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl',
-                  )}>
-                  <Image alt={title} className="h-full w-full" placeholder="blur" src={image} />
-                  <ItemOverlay item={item} />
+            const {title, image, description, noClick, slug} = item;
+
+            if (noClick) {
+              return (
+                <div key={`${title}-${index}`} className="pb-6">
+                  <div
+                    className={classNames(
+                      'relative h-max w-full overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl',
+                    )}>
+                    <Image alt={title} className="h-full w-full" placeholder="blur" src={image} />
+                    <ItemOverlay item={item} />
+                  </div>
                 </div>
-              </div>
-            );
+              );
+            } else {
+              return (
+                <div key={`${title}-${index}`} className="pb-6">
+                  <div className="overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl bg-neutral-900">
+                    <div className="relative">
+                      <Image alt={title} className="h-full w-full object-cover" placeholder="blur" src={image} />
+                    </div>
+                    <Link href={`/projects/${slug}`}>
+                      <div className="p-4 cursor-pointer hover:bg-neutral-800 transition-all duration-300">
+                        <h3 className="text-lg font-bold text-white">{title}</h3>
+                        <p className="text-sm text-neutral-300">{description}</p>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              );
+            }
           })}
         </div>
       </div>
     </Section>
   );
 });
-
 Portfolio.displayName = 'Portfolio';
 export default Portfolio;
 
-const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {slug, title, description, noClick}}) => {
+const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item}) => {
+  const {slug, title, description, repoUrl} = item;
   const [mobile, setMobile] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
   const linkRef = useRef<HTMLAnchorElement>(null);
@@ -62,41 +82,24 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {slug, title, descri
     [mobile, showOverlay],
   );
 
-  const content = (
-    <div className="relative h-full w-full p-4">
-      <div className="flex h-full w-full flex-col gap-y-2 overflow-y-auto overscroll-contain">
-        <h2 className="text-center font-bold text-white opacity-100">{title}</h2>
-        <p className="text-xs text-white opacity-100 sm:text-sm">{description}</p>
-      </div>
-      {!noClick && (
-        <ArrowTopRightOnSquareIcon className="absolute bottom-1 right-1 h-4 w-4 shrink-0 text-white sm:bottom-2 sm:right-2" />
-      )}
-    </div>
-  );
-
-  if (noClick) {
-    return (
-      <div className={classNames(
-        'absolute inset-0 h-full w-full bg-gray-900 transition-all duration-300',
-        { 'opacity-0 hover:opacity-80': !mobile },
-        showOverlay ? 'opacity-80' : 'opacity-0'
-      )}>
-        {content}
-      </div>
-    );
-  }
-
   return (
-    <Link
+    <a
       className={classNames(
         'absolute inset-0 h-full w-full  bg-gray-900 transition-all duration-300',
         {'opacity-0 hover:opacity-80': !mobile},
         showOverlay ? 'opacity-80' : 'opacity-0',
       )}
-      href={`/projects/${slug}`}// Example of a new internal link
+      href={repoUrl}
       onClick={handleItemClick}
-      ref={linkRef}>
-      {content}
-    </Link>
+      ref={linkRef}
+      target="_blank">
+      <div className="relative h-full w-full p-4">
+        <div className="flex h-full w-full flex-col gap-y-2 overflow-y-auto overscroll-contain">
+          <h2 className="text-center font-bold text-white opacity-100">{title}</h2>
+          <p className="text-xs text-white opacity-100 sm:text-sm">{description}</p>
+        </div>
+        <ArrowTopRightOnSquareIcon className="absolute bottom-1 right-1 h-4 w-4 shrink-0 text-white sm:bottom-2 sm:right-2" />
+      </div>
+    </a>
   );
 });
