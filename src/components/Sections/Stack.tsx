@@ -11,7 +11,7 @@ const Stack: FC<{stackData: StackSection}> = memo(({stackData}) => {
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.Stack}>
       <div className="flex flex-col items-center gap-y-8 ">
-        <h2 className="self-center text-xl font-bold text-white">{title}</h2>
+        <h2 className="self-center text-6xl font-bold text-white">{title}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full shadow-lg shadow-orange-500 px-4">
           {groups.map((group, groupIndex) => (
             <div key={groupIndex} className="rounded-lg shadow-lg p-6 flex flex-col gap-y-4">

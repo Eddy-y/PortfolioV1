@@ -74,7 +74,7 @@ const ProjectDetails: FC = () => {
           )}
         </div>
       </div>
-      <Footer />
+      <Footer className="bg-neutral-200" />
     </Page>
   );
 };
