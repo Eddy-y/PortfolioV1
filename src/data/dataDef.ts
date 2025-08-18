@@ -15,6 +15,7 @@ export interface HomepageMeta {
   twitterUrl?: string;
   twitterDescription?: string;
   twitterImageUrl?: string;
+  
 }
 
 /**

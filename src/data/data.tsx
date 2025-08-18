@@ -17,6 +17,12 @@ import heroImage from '../images/VolleyballBack.jpg';
 
 import RAG_img from '../images/portfolio/RAG.png';
 import estimator_img from '../images/portfolio/Estimator.png';
+
+import RAG_img2 from '../images/Projects/RAG.png'
+import RAG_img3 from '../images/Projects/rag2.png'
+import estimator_img2 from '../images/Projects/Estimator.png'
+import estimator_img3 from '../images/Projects/estimator3.png'
+
 //import thunder_img from '../images/portfolio//Thunder.jpg';
 import thunder2_img from '../images/portfolio//Thunder2.jpg';
 import chucho_img from '../images/portfolio//Chucho.jpg';
@@ -56,10 +62,6 @@ import huggingface from '../images/stack/huggingface.png'
 import jupyter from '../images/stack/jupyter.png'
 
 
-
-
-
-
 import dieWithASmileImage from '../images/songs/DieWithASmile.png';
 import zenzenzenseImage from '../images/songs/Zenzenzense.jpg';
 import theNightsImage from '../images/songs/TheNights.jpg';
@@ -71,7 +73,8 @@ import fuegoleonImage from '../images/quotes/fuegoleon.jpg';
 import morganFreemanImage from '../images/quotes/freeman.jpg';
 import violetEvergardenImage from '../images/quotes/violet.png';
 
-import Project1Description from '../components/Sections/Portfolio/ProjectDescriptions/RagProject';
+import RAGDescription from '../components/Sections/Portfolio/ProjectDescriptions/RagProject';
+import EstimatorDescription from '../components/Sections/Portfolio/ProjectDescriptions/RagProject';
 
 
 
@@ -361,10 +364,10 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Retrieval-augmented generation',
     description: 'Python-based RAG app that lets users upload documents and ask questions. The LLM uses the uploaded files as a knowledge base to generate context-aware responses.',
-    fullDescription:<Project1Description />,
-    slug:'first',
+    fullDescription:<RAGDescription />,
+    slug:'Rag',
     image: RAG_img,
-    images:[RAG_img,estimator_img],
+    images:[RAG_img2],
     technologies: ['Python','Pinecone', 'OpenAI','Langchain'],
     repoUrl:'https://github.com/Eddy-y/RAG_PoC_Public'
   },
@@ -380,10 +383,10 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Automated Project Estimator',
     description: 'A Streamlit application that uses a fine-tuned OpenAI assistant to generate functional requirements, assisting with project planning.',
-    fullDescription:<Project1Description />,
+    fullDescription:<EstimatorDescription />,
     slug:'Estimator',
     image: estimator_img,
-    images:[estimator_img],
+    images:[estimator_img2],
     technologies:['Python','Streamlit','OpenAI','Pandas'],
     repoUrl:'https://github.com/Eddy-y/ProjectEstimatorPublic',
   },

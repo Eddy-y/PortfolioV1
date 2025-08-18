@@ -36,38 +36,43 @@ const ProjectDetails: FC = () => {
   return (
     <Page title={`${project.title} | ${homePageMeta.title}`} description={pageDescription}>
       <Header />
-      <div className="container mx-auto p-8 pt-24 min-h-screen">
-        {/* Title in the top left */}
-        <h1 className="text-4xl font-bold text-neutral-800 mb-4">{project.title}</h1>
-        
-        {/* Full description */}
-        <p className="prose prose-lg text-neutral-600 mb-10">{project.fullDescription}</p>
-        
-        {/* Two images with a fixed size */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {project.images && project.images.slice(0, 2).map((imageSrc, index) => (
-            <div key={index} className="relative w-full h-80 rounded-lg overflow-hidden shadow-xl">
+      <div className="container mx-auto p-8 pt-24 min-h-screen bg-neutral-100 ">
+        <div className="mx-auto px-4 md:px-6 max-w-6xl"> 
+          <div className="mb-4">
+            <h1 className="text-6xl font-bold">{project.title}</h1>
+            {/* Year moved to the left below the title */}
+            <div className="text-lg font-bold text-orange-500 my-4">2022</div>
+          </div>
+          {/* Full description with padding and max width */}
+          <div className="flex justify-center my-12">
+              <p className="text-neutral-600 mb-10 text orange-100">{project.fullDescription}</p>
+          </div>
+          
+          {/* Render a single image centered below the text */}
+          {project.images && project.images.length > 0 && (
+            <div key={0} className="relative mx-auto w-full max-w-xl h-80 rounded-lg overflow-hidden shadow-xl">
               <Image 
-                src={imageSrc} 
-                alt={`${project.title} - Image ${index + 1}`}
+                src={project.images[0]} 
+                alt={`${project.title} - Image 1`}
                 layout="fill"
                 objectFit="cover"
               />
             </div>
-          ))}
+          )}
+
+          {/* Repository button */}
+          {project.repoUrl && (
+            <div className="mt-8 text-center">
+              <a
+                href={project.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 border-2 border-orange-500 text-orange-500 font-medium text-sm leading-tight uppercase rounded-full hover:bg-orange-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition duration-150 ease-in-out">
+                View Project
+              </a>
+            </div>
+          )}
         </div>
-        {/* Repository button */}
-        {project.repoUrl && (
-          <div className="mt-8 text-center">
-            <a
-              href={project.repoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-6 py-3 border-2 border-orange-500 text-orange-500 font-medium text-sm leading-tight uppercase rounded-full hover:bg-orange-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition duration-150 ease-in-out">
-              View Project
-            </a>
-          </div>
-        )}
       </div>
       <Footer />
     </Page>
