@@ -22,6 +22,43 @@ import thunder2_img from '../images/portfolio//Thunder2.jpg';
 import chucho_img from '../images/portfolio//Chucho.jpg';
 import chai_img from '../images/portfolio//Chai.jpg';
 
+import javascript from '../images/stack/javascript.png'
+import c from '../images/stack/c.png'
+import python from '../images/stack/python.png'
+import java from '../images/stack/java.png'
+import r from '../images/stack/r.png'
+import html from '../images/stack/html.png'
+import css from '../images/stack/css.png'
+import bootstrap from '../images/stack/bootstrap.png'
+import pinecone from '../images/stack/pinecone.png'
+import langchain from '../images/stack/langchain.png'
+import pytorch from '../images/stack/python.png'
+import pandas from '../images/stack/pandas.png'
+import numpy from '../images/stack/numpy.png'
+import matplotlib from '../images/stack/matplotlib.png'
+import streamlit from '../images/stack/streamlit.png'
+import scikit from '../images/stack/scikit.png'
+import sqlserver from '../images/stack/sqlserver.png'
+import postgresql from '../images/stack/postgresql.png'
+import mysql from '../images/stack/mysql.png'
+import mongodb from '../images/stack/mongodb.png'
+import git from '../images/stack/git.png'
+import github from '../images/stack/github.png'
+import vscode from '../images/stack/vscode.png'
+import postman from '../images/stack/postman.png'
+import intellij from '../images/stack/intellij.png'
+import netbeans from '../images/stack/netbeans.png'
+import azure from '../images/stack/azure.png'
+import aws from '../images/stack/aws.png'
+import docker from '../images/stack/docker.png'
+import openai from '../images/stack/openai.png'
+import huggingface from '../images/stack/huggingface.png'
+import jupyter from '../images/stack/jupyter.png'
+
+
+
+
+
 
 import dieWithASmileImage from '../images/songs/DieWithASmile.png';
 import zenzenzenseImage from '../images/songs/Zenzenzense.jpg';
@@ -376,62 +413,69 @@ export const stackSection: StackSection = {
     {
       name: 'Programming Languages',
       items: [
-        {name: 'Python', Icon: GithubIcon, href: '[https://www.python.org/](https://www.python.org/)'},
-        {name: 'C#', Icon: GithubIcon, href: '[https://learn.microsoft.com/en-us/dotnet/csharp/](https://learn.microsoft.com/en-us/dotnet/csharp/)'},
-        {name: 'JavaScript', Icon: GithubIcon, href: '[https://www.javascript.com/](https://www.javascript.com/)'},
-        // More languages can be added here
+        {name: 'Python', imageSrc: python},
+        {name: 'C#', imageSrc: c},
+        {name: 'JavaScript', imageSrc: javascript},
+        {name: 'Java', imageSrc: java},
+        {name: 'R', imageSrc: r},
       ],
     },
     {
       name: 'Web & API Development',
       items: [
-        {name: 'React', Icon: GithubIcon, href: '[https://react.dev/](https://react.dev/)'},
-        {name: 'TypeScript', Icon: GithubIcon, href: '[https://www.typescriptlang.org/](https://www.typescriptlang.org/)'},
-        {name: 'Tailwind CSS', Icon: GithubIcon, href: '[https://tailwindcss.com/](https://tailwindcss.com/)'},
-        // More web technologies can be added here
+        {name: 'HTML', imageSrc: html},
+        {name: 'CSS', imageSrc: css},
+        {name: 'Bootstrap', imageSrc: bootstrap},
       ],
     },
     {
       name: 'AI & Data Science',
       items: [
-        {name: 'Pinecone', Icon: GithubIcon, href: '[https://www.pinecone.io/](https://www.pinecone.io/)'},
-        {name: 'Langchain', Icon: GithubIcon, href: '[https://www.langchain.com/](https://www.langchain.com/)'},
-        {name: 'Scikit-learn', Icon: GithubIcon, href: '[https://scikit-learn.org/stable/](https://scikit-learn.org/stable/)'},
-        // More AI/Data Science tools
+        {name: 'Pinecone', imageSrc: pinecone},
+        {name: 'PyTorch', imageSrc: pytorch},
+        {name: 'Pandas', imageSrc: pandas},
+        {name: 'Numpy', imageSrc: numpy},
+        {name: 'Matplotlib', imageSrc: matplotlib},
+        {name: 'Streamlit', imageSrc: streamlit},
+        {name: 'Jupyter', imageSrc: jupyter},
+        {name: 'Scikit-learn', imageSrc: scikit},
       ],
     },
     {
       name: 'Databases',
       items: [
-        {name: 'SQL Server', Icon: GithubIcon, href: '[https://www.microsoft.com/en-us/sql-server/](https://www.microsoft.com/en-us/sql-server/)'},
-        {name: 'PostgreSQL', Icon: GithubIcon, href: '[https://www.postgresql.org/](https://www.postgresql.org/)'},
-        // More databases
+        {name: 'SQL Server', imageSrc: sqlserver},
+        {name: 'PostgreSQL', imageSrc: postgresql},
+        {name: 'MySQL', imageSrc: mysql},
+        {name: 'MongoDB', imageSrc: mongodb},
       ],
     },
     {
       name: 'Developer Tools',
       items: [
-        {name: 'Git', Icon: GithubIcon, href: '[https://git-scm.com/](https://git-scm.com/)'},
-        {name: 'Docker', Icon: GithubIcon, href: '[https://www.docker.com/](https://www.docker.com/)'},
-        {name: 'Visual Studio Code', Icon: GithubIcon, href: '[https://code.visualstudio.com/](https://code.visualstudio.com/)'},
-        // More tools
+        {name: 'Git', imageSrc: git},
+        {name: 'Visual Studio Code', imageSrc: vscode},
+        {name: 'Github', imageSrc: github},
+        {name: 'Postman', imageSrc: postman},
+        {name: 'IntelliJIdea', imageSrc: intellij},
+        {name: 'Netbeans', imageSrc: netbeans},
       ],
     },
     {
       name: 'DevOps & Cloud',
       items: [
-        {name: 'AWS Lambda', Icon: GithubIcon, href: '[https://aws.amazon.com/lambda/](https://aws.amazon.com/lambda/)'},
-        {name: 'S3 Bucket', Icon: GithubIcon, href: '[https://aws.amazon.com/s3/](https://aws.amazon.com/s3/)'},
-        {name: 'Azure Data Factory', Icon: GithubIcon, href: '[https://azure.microsoft.com/en-us/products/data-factory](https://azure.microsoft.com/en-us/products/data-factory)'},
-        // More DevOps/Cloud tools
+        {name: 'Azure', imageSrc: azure},
+        {name: 'Docker', imageSrc: docker},
+        {name: 'AWS', imageSrc: aws},
       ],
     },
     {
       name: 'LLMs & MLOps',
       items: [
-        {name: 'OpenAI', Icon: GithubIcon, href: '[https://openai.com/](https://openai.com/)'},
-        {name: 'Langchain', Icon: GithubIcon, href: '[https://www.langchain.com/](https://www.langchain.com/)'},
-        // More LLM/MLOps tools
+        {name: 'OpenAI API', imageSrc: openai},
+        {name: 'LangChain', imageSrc: langchain},
+        {name: 'HuggingFace', imageSrc: huggingface},
+
       ],
     },
   ],

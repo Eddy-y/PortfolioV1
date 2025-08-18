@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import Image from 'next/image';
 import {FC, memo} from 'react';
 import {SectionId} from '../../data/data';
 import {StackSection} from '../../data/dataDef';
@@ -18,7 +19,6 @@ const Stack: FC<{stackData: StackSection}> = memo(({stackData}) => {
               <div className="grid grid-cols-3 gap-4">
                 {group.items.map((item, itemIndex) => (
                   <a
-                    href={item.href}
                     key={itemIndex}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -26,7 +26,15 @@ const Stack: FC<{stackData: StackSection}> = memo(({stackData}) => {
                       'flex flex-col items-center gap-y-2 transition-all duration-300 hover:scale-110',
                       item.href ? 'cursor-pointer' : 'cursor-default'
                     )}>
-                    <item.Icon className="h-10 w-10 text-white" />
+                    {item.imageSrc && (
+                      <Image
+                        src={item.imageSrc}
+                        alt={item.name}
+                        width={40}
+                        height={40}
+                        className="h-10 w-10"
+                      />
+                    )}
                     <span className="text-xs font-medium text-white text-center">{item.name}</span>
                   </a>
                 ))}

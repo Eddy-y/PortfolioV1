@@ -130,7 +130,7 @@ export interface Testimonial {
  */
 export interface StackItem {
   name: string;
-  Icon: FC<IconProps>;
+  imageSrc: string | StaticImageData;
   href?: string;
 }
 
