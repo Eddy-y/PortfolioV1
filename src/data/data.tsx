@@ -17,7 +17,7 @@ import heroImage from '../images/VolleyballBack.jpg';
 
 import RAG_img from '../images/portfolio/RAG.png';
 import estimator_img from '../images/portfolio/Estimator.png';
-import thunder_img from '../images/portfolio//Thunder.jpg';
+//import thunder_img from '../images/portfolio//Thunder.jpg';
 import thunder2_img from '../images/portfolio//Thunder2.jpg';
 import chucho_img from '../images/portfolio//Chucho.jpg';
 import chai_img from '../images/portfolio//Chai.jpg';
@@ -236,17 +236,18 @@ export const additionalSkills: AdditionalSkillSection = {
 export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Retrieval-augmented generation',
-    description: 'Give a short description of your project here.',
+    description: 'Python-based RAG app that lets users upload documents and ask questions. The LLM uses the uploaded files as a knowledge base to generate context-aware responses.',
     fullDescription:<Project1Description />,
     slug:'first',
     image: RAG_img,
     images:[RAG_img,estimator_img],
+    technologies: ['Python','Pinecone', 'OpenAI','Langchain'],
     repoUrl:'https://github.com/Eddy-y/RAG_PoC_Public'
   },
 
   {
     title: 'Thunder',
-    description: 'This is my First and Older Dog',
+    description: '',
     slug:'Thunder',
     image: thunder2_img,
     noClick: true,
@@ -254,47 +255,28 @@ export const portfolioItems: PortfolioItem[] = [
 
   {
     title: 'Automated Project Estimator',
-    description: 'Give a short description of your project here.',
+    description: 'A Streamlit application that uses a fine-tuned OpenAI assistant to generate functional requirements, assisting with project planning.',
     fullDescription:<Project1Description />,
     slug:'Estimator',
     image: estimator_img,
     images:[estimator_img],
+    technologies:['Python','Streamlit','OpenAI','Pandas'],
     repoUrl:'https://github.com/Eddy-y/ProjectEstimatorPublic',
   },
   {
     title: 'Chucho',
-    description: 'This is my second Dog',
+    description: '',
     slug:'Chucho',
     image: chucho_img,
     noClick: true,
   },
   {
-    title: 'Automated Project Estimator',
-    description: 'Give a short description of your project here.',
-    fullDescription:<Project1Description />,
-    slug:'Estimator',
-    image: estimator_img,
-    images:[estimator_img],
-    repoUrl:'https://github.com/Eddy-y/RAG_PoC_Public',
-  },
-  {
     title: 'Chai',
-    description: 'This is my third Dog',
+    description: '',
     slug:'Chai',
     image: chai_img,
     noClick: true,
-  },
-  {
-    title: 'Retrieval-augmented generation',
-    description: 'Give a short description of your project here.',
-    fullDescription:<Project1Description />,
-    slug:'first',
-    image: RAG_img,
-    images:[RAG_img,estimator_img],
-    repoUrl:'https://github.com/Eddy-y/RAG_PoC_Public'
-  },
-
-  
+  },  
   
 ];
 

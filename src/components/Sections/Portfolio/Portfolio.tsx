@@ -18,14 +18,14 @@ const Portfolio: FC = memo(() => {
         {/* <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"> */}
         <div className="w-full columns-1 md:columns-2 lg:columns-3">
           {portfolioItems.map((item, index) => {
-            const {title, image, description, noClick, slug} = item;
+            const {title, image, description, noClick, slug, technologies} = item;
 
             if (noClick) {
               return (
                 <div key={`${title}-${index}`} className="pb-6">
                   <div
                     className={classNames(
-                      'relative h-max w-full overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl',
+                      'relative h-max w-full overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105',
                     )}>
                     <Image alt={title} className="h-full w-full" placeholder="blur" src={image} />
                     <ItemOverlay item={item} />
@@ -35,14 +35,23 @@ const Portfolio: FC = memo(() => {
             } else {
               return (
                 <div key={`${title}-${index}`} className="pb-6">
-                  <div className="overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl bg-neutral-900">
+                  <div className="overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl bg-neutral-900 transition-all duration-300 hover:-translate-y-1 hover:scale-105">
                     <div className="relative">
                       <Image alt={title} className="h-full w-full object-cover" placeholder="blur" src={image} />
                     </div>
                     <Link href={`/projects/${slug}`}>
-                      <div className="p-4 cursor-pointer hover:bg-neutral-800 transition-all duration-300">
+                      <div className="p-4 cursor-pointer transition-all duration-300">
                         <h3 className="text-lg font-bold text-white">{title}</h3>
-                        <p className="text-sm text-neutral-300">{description}</p>
+                        {technologies && (
+                          <div className="mt-2 flex flex-wrap justify-start gap-2">
+                            {technologies.map((tech, techIndex) => (
+                              <span key={techIndex} className="rounded-full bg-black px-2 py-1 text-xs text-white border border-orange-500">
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                        <p className="mt-2 text-sm text-neutral-300">{description}</p>
                       </div>
                     </Link>
                   </div>
@@ -59,7 +68,7 @@ Portfolio.displayName = 'Portfolio';
 export default Portfolio;
 
 const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item}) => {
-  const {slug, title, description, repoUrl} = item;
+  const {title, description, repoUrl} = item;
   const [mobile, setMobile] = useState(false);
   const [showOverlay, setShowOverlay] = useState(false);
   const linkRef = useRef<HTMLAnchorElement>(null);

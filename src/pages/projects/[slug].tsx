@@ -28,8 +28,13 @@ const ProjectDetails: FC = () => {
     );
   }
 
+  // Determine the description content based on its type
+  const pageDescription = typeof project.fullDescription === 'string' 
+    ? project.fullDescription 
+    : 'A detailed description of the project.';
+
   return (
-    <Page title={`${project.title} | ${homePageMeta.title}`} description={project.fullDescription}>
+    <Page title={`${project.title} | ${homePageMeta.title}`} description={pageDescription}>
       <Header />
       <div className="container mx-auto p-8 pt-24 min-h-screen">
         {/* Title in the top left */}
@@ -40,7 +45,7 @@ const ProjectDetails: FC = () => {
         
         {/* Two images with a fixed size */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {project.images.slice(0, 2).map((imageSrc, index) => (
+          {project.images && project.images.slice(0, 2).map((imageSrc, index) => (
             <div key={index} className="relative w-full h-80 rounded-lg overflow-hidden shadow-xl">
               <Image 
                 src={imageSrc} 
