@@ -126,6 +126,25 @@ export interface Testimonial {
 }
 
 /**
+ * Stack section
+ */
+export interface StackItem {
+  name: string;
+  Icon: FC<IconProps>;
+  href?: string;
+}
+
+export interface StackGroup {
+  name: string;
+  items: StackItem[];
+}
+
+export interface StackSection {
+  title: string;
+  groups: StackGroup[];
+}
+
+/**
  * Music Carousel section
  */
 export interface Song {

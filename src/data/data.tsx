@@ -48,6 +48,7 @@ import {
   SkillGroup,
   AdditionalSkillSection,
   Social,
+  StackSection,
   TestimonialSection,
   TimelineItem,
   MusicCarouselSection, // Import the new interface
@@ -72,6 +73,7 @@ export const SectionId = {
   Resume: 'resume',
   Skills: 'skills',
   Stats: 'stats',
+  Stack: 'stack',
   Testimonials: 'testimonials',
   Music: 'music',
 } as const;
@@ -230,55 +232,6 @@ export const additionalSkills: AdditionalSkillSection = {
   ],
 };
 
-/**
- * Portfolio section
- */
-export const portfolioItems: PortfolioItem[] = [
-  {
-    title: 'Retrieval-augmented generation',
-    description: 'Python-based RAG app that lets users upload documents and ask questions. The LLM uses the uploaded files as a knowledge base to generate context-aware responses.',
-    fullDescription:<Project1Description />,
-    slug:'first',
-    image: RAG_img,
-    images:[RAG_img,estimator_img],
-    technologies: ['Python','Pinecone', 'OpenAI','Langchain'],
-    repoUrl:'https://github.com/Eddy-y/RAG_PoC_Public'
-  },
-
-  {
-    title: 'Thunder',
-    description: '',
-    slug:'Thunder',
-    image: thunder2_img,
-    noClick: true,
-  },
-
-  {
-    title: 'Automated Project Estimator',
-    description: 'A Streamlit application that uses a fine-tuned OpenAI assistant to generate functional requirements, assisting with project planning.',
-    fullDescription:<Project1Description />,
-    slug:'Estimator',
-    image: estimator_img,
-    images:[estimator_img],
-    technologies:['Python','Streamlit','OpenAI','Pandas'],
-    repoUrl:'https://github.com/Eddy-y/ProjectEstimatorPublic',
-  },
-  {
-    title: 'Chucho',
-    description: '',
-    slug:'Chucho',
-    image: chucho_img,
-    noClick: true,
-  },
-  {
-    title: 'Chai',
-    description: '',
-    slug:'Chai',
-    image: chai_img,
-    noClick: true,
-  },  
-  
-];
 
 /**
  * Resume section -- TODO: Standardize resume contact format or offer MDX
@@ -363,6 +316,126 @@ export const experience: TimelineItem[] = [
   },
   
 ];
+
+/**
+ * Portfolio section
+ */
+export const portfolioItems: PortfolioItem[] = [
+  {
+    title: 'Retrieval-augmented generation',
+    description: 'Python-based RAG app that lets users upload documents and ask questions. The LLM uses the uploaded files as a knowledge base to generate context-aware responses.',
+    fullDescription:<Project1Description />,
+    slug:'first',
+    image: RAG_img,
+    images:[RAG_img,estimator_img],
+    technologies: ['Python','Pinecone', 'OpenAI','Langchain'],
+    repoUrl:'https://github.com/Eddy-y/RAG_PoC_Public'
+  },
+
+  {
+    title: 'Thunder',
+    description: '',
+    slug:'Thunder',
+    image: thunder2_img,
+    noClick: true,
+  },
+
+  {
+    title: 'Automated Project Estimator',
+    description: 'A Streamlit application that uses a fine-tuned OpenAI assistant to generate functional requirements, assisting with project planning.',
+    fullDescription:<Project1Description />,
+    slug:'Estimator',
+    image: estimator_img,
+    images:[estimator_img],
+    technologies:['Python','Streamlit','OpenAI','Pandas'],
+    repoUrl:'https://github.com/Eddy-y/ProjectEstimatorPublic',
+  },
+  {
+    title: 'Chucho',
+    description: '',
+    slug:'Chucho',
+    image: chucho_img,
+    noClick: true,
+  },
+  {
+    title: 'Chai',
+    description: '',
+    slug:'Chai',
+    image: chai_img,
+    noClick: true,
+  },  
+  
+];
+
+/**
+ * Stack section
+ */
+export const stackSection: StackSection = {
+  title: 'My Tech Stack',
+  groups: [
+    {
+      name: 'Programming Languages',
+      items: [
+        {name: 'Python', Icon: GithubIcon, href: '[https://www.python.org/](https://www.python.org/)'},
+        {name: 'C#', Icon: GithubIcon, href: '[https://learn.microsoft.com/en-us/dotnet/csharp/](https://learn.microsoft.com/en-us/dotnet/csharp/)'},
+        {name: 'JavaScript', Icon: GithubIcon, href: '[https://www.javascript.com/](https://www.javascript.com/)'},
+        // More languages can be added here
+      ],
+    },
+    {
+      name: 'Web & API Development',
+      items: [
+        {name: 'React', Icon: GithubIcon, href: '[https://react.dev/](https://react.dev/)'},
+        {name: 'TypeScript', Icon: GithubIcon, href: '[https://www.typescriptlang.org/](https://www.typescriptlang.org/)'},
+        {name: 'Tailwind CSS', Icon: GithubIcon, href: '[https://tailwindcss.com/](https://tailwindcss.com/)'},
+        // More web technologies can be added here
+      ],
+    },
+    {
+      name: 'AI & Data Science',
+      items: [
+        {name: 'Pinecone', Icon: GithubIcon, href: '[https://www.pinecone.io/](https://www.pinecone.io/)'},
+        {name: 'Langchain', Icon: GithubIcon, href: '[https://www.langchain.com/](https://www.langchain.com/)'},
+        {name: 'Scikit-learn', Icon: GithubIcon, href: '[https://scikit-learn.org/stable/](https://scikit-learn.org/stable/)'},
+        // More AI/Data Science tools
+      ],
+    },
+    {
+      name: 'Databases',
+      items: [
+        {name: 'SQL Server', Icon: GithubIcon, href: '[https://www.microsoft.com/en-us/sql-server/](https://www.microsoft.com/en-us/sql-server/)'},
+        {name: 'PostgreSQL', Icon: GithubIcon, href: '[https://www.postgresql.org/](https://www.postgresql.org/)'},
+        // More databases
+      ],
+    },
+    {
+      name: 'Developer Tools',
+      items: [
+        {name: 'Git', Icon: GithubIcon, href: '[https://git-scm.com/](https://git-scm.com/)'},
+        {name: 'Docker', Icon: GithubIcon, href: '[https://www.docker.com/](https://www.docker.com/)'},
+        {name: 'Visual Studio Code', Icon: GithubIcon, href: '[https://code.visualstudio.com/](https://code.visualstudio.com/)'},
+        // More tools
+      ],
+    },
+    {
+      name: 'DevOps & Cloud',
+      items: [
+        {name: 'AWS Lambda', Icon: GithubIcon, href: '[https://aws.amazon.com/lambda/](https://aws.amazon.com/lambda/)'},
+        {name: 'S3 Bucket', Icon: GithubIcon, href: '[https://aws.amazon.com/s3/](https://aws.amazon.com/s3/)'},
+        {name: 'Azure Data Factory', Icon: GithubIcon, href: '[https://azure.microsoft.com/en-us/products/data-factory](https://azure.microsoft.com/en-us/products/data-factory)'},
+        // More DevOps/Cloud tools
+      ],
+    },
+    {
+      name: 'LLMs & MLOps',
+      items: [
+        {name: 'OpenAI', Icon: GithubIcon, href: '[https://openai.com/](https://openai.com/)'},
+        {name: 'Langchain', Icon: GithubIcon, href: '[https://www.langchain.com/](https://www.langchain.com/)'},
+        // More LLM/MLOps tools
+      ],
+    },
+  ],
+};
 
 /**
  * Testimonial section

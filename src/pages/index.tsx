@@ -9,8 +9,9 @@ import Hero from '../components/Sections/Hero';
 import Portfolio from '../components/Sections/Portfolio/Portfolio';
 import Resume from '../components/Sections/Resume';
 import Testimonials from '../components/Sections/Testimonials';
-import MusicCarousel from '../components/Sections/Music'; // Import your new component
-import {homePageMeta, musicCarouselData} from '../data/data'; // Import data
+import MusicCarousel from '../components/Sections/Music';
+import Stack from '../components/Sections/Stack'; 
+import {homePageMeta, musicCarouselData, stackSection} from '../data/data'; // Import data
 
 
 // eslint-disable-next-line react-memo/require-memo
@@ -25,6 +26,7 @@ const Home: FC = memo(() => {
       <About />
       <Resume />
       <Portfolio />
+      <Stack stackData={stackSection} />
       <Testimonials />
       <MusicCarousel musicCarouselData={musicCarouselData} /> {/* Use your new component */}
       {/*<Contact />*/}
