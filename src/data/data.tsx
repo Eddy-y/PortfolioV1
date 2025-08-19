@@ -19,9 +19,7 @@ import RAG_img from '../images/portfolio/RAG.png';
 import estimator_img from '../images/portfolio/Estimator.png';
 
 import RAG_img2 from '../images/Projects/RAG.png'
-import RAG_img3 from '../images/Projects/rag2.png'
 import estimator_img2 from '../images/Projects/Estimator.png'
-import estimator_img3 from '../images/Projects/estimator3.png'
 
 //import thunder_img from '../images/portfolio//Thunder.jpg';
 import thunder2_img from '../images/portfolio//Thunder2.jpg';
@@ -369,7 +367,8 @@ export const portfolioItems: PortfolioItem[] = [
     image: RAG_img,
     images:[RAG_img2],
     technologies: ['Python','Pinecone', 'OpenAI','Langchain'],
-    repoUrl:'https://github.com/Eddy-y/RAG_PoC_Public'
+    repoUrl:'https://github.com/Eddy-y/RAG_PoC_Public',
+    year: '2024'
   },
 
   {
@@ -389,6 +388,7 @@ export const portfolioItems: PortfolioItem[] = [
     images:[estimator_img2],
     technologies:['Python','Streamlit','OpenAI','Pandas'],
     repoUrl:'https://github.com/Eddy-y/ProjectEstimatorPublic',
+    year: '2024'
   },
   {
     title: 'Chucho',

@@ -99,6 +99,7 @@ export interface PortfolioItem {
   images?: string[] | StaticImageData[];
   repoUrl?: string; // Add this property for the new button
   noClick?: boolean; // Add this property
+  year?: string;
   technologies?: string[];
 }
 

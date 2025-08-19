@@ -28,7 +28,7 @@ const Home: FC = memo(() => {
       <Portfolio />
       <Stack stackData={stackSection} />
       <Testimonials />
-      <MusicCarousel musicCarouselData={musicCarouselData} /> {/* Use your new component */}
+      <MusicCarousel musicCarouselData={musicCarouselData} />
       {/*<Contact />*/}
       <Footer />
     </Page>

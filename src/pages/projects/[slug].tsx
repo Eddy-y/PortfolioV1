@@ -41,7 +41,7 @@ const ProjectDetails: FC = () => {
           <div className="mb-4">
             <h1 className="text-6xl font-bold">{project.title}</h1>
             {/* Year moved to the left below the title */}
-            <div className="text-lg font-bold text-orange-500 my-4">2022</div>
+            <div className="text-lg font-bold text-orange-500 my-4">{project.year}</div>
           </div>
           {/* Full description with padding and max width */}
           <div className="flex justify-center my-12">
