@@ -411,7 +411,7 @@ export const portfolioItems: PortfolioItem[] = [
  * Stack section
  */
 export const stackSection: StackSection = {
-  title: 'My Tech Stack',
+  title: 'Tech Stack',
   groups: [
     {
       name: 'Programming Languages',

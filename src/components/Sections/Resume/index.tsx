@@ -41,9 +41,9 @@ const Resume: FC = memo(() => {
             </ResumeSection>
           </div>
         </div>
-          <ResumeSection title="Stack">
+          {/* <ResumeSection title="Stack">
               <AdditionalSkills additionalSkills={additionalSkills} />
-            </ResumeSection>
+            </ResumeSection> */}
       </div>
     </Section>
   );
