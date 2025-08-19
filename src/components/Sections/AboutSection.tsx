@@ -4,6 +4,7 @@ import { Badge } from "../UI/badge";
 import { Card, CardContent } from "../UI/card";
 import { motion } from "framer-motion";
 import { useToast } from "../../hooks/use-toast";
+import Section from '../Layout/Section_Resume';
 
 import {
   FileText,
@@ -12,14 +13,14 @@ import {
   //Award,
   Download,
 } from "lucide-react";
-import { Links } from "../../data/links";
+// import { Links } from "../../data/links";
 import {aboutData, SectionId} from '../../data/data';
 
 
 const AboutSection = () => {
-  const resumeUrl = Links.resume;
+  const resumeUrl = '/assets/resume.pdf';
   const { toast } = useToast();
-  const {description, aboutItems} = aboutData;
+  const {description} = aboutData;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -50,7 +51,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="py-14 relative bg-neutral-800">
+    <Section className="py-14 relative bg-neutral-800" sectionId={SectionId.About}>
       <div className="absolute top-0 inset-x-0 h-1/2 -z-10"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
@@ -192,16 +193,16 @@ const AboutSection = () => {
               className="flex flex-wrap gap-2 justify-center lg:justify-start"
             >
               <Badge variant="outline" className="text-white">
-                React
+                Python
               </Badge>
               <Badge variant="outline" className="text-white">
-                Node
+                Pandas
               </Badge>
               <Badge variant="outline" className="text-white">
-                UI/UX
+                Power BI
               </Badge>
               <Badge variant="outline" className="text-white">
-                Full Stack
+                ETL
               </Badge>
             </motion.div>
 
@@ -220,7 +221,7 @@ const AboutSection = () => {
           </motion.div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

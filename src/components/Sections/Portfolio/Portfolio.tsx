@@ -2,6 +2,7 @@ import {ArrowTopRightOnSquareIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
+import {motion} from 'framer-motion';
 import {FC, memo, MouseEvent, useCallback, useEffect, useRef, useState} from 'react';
 
 import {isMobile} from '../../../config';
@@ -11,18 +12,53 @@ import useDetectOutsideClick from '../../../hooks/useDetectOutsideClick';
 import Section from '../../Layout/Section';
 
 const Portfolio: FC = memo(() => {
+  const containerVariants = {
+    hidden: {opacity: 0},
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: {opacity: 0, y: 70},
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
   return (
     <Section className="bg-neutral-800" sectionId={SectionId.Portfolio}>
       <div className="flex flex-col gap-y-8">
-        <h2 className="self-center text-6xl font-bold text-white">My projects - and Dogs</h2>
+        <motion.h2
+          className="self-center text-6xl font-bold text-white"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{once: true, amount: 0.2}}
+          variants={itemVariants}>
+          My projects - and Dogs
+        </motion.h2>
         {/* <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"> */}
-        <div className="w-full columns-1 md:columns-2 lg:columns-3">
+        <motion.div
+          className="w-full columns-1 md:columns-2 lg:columns-3"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{once: true, amount: 0.2}}
+          variants={containerVariants}>
           {portfolioItems.map((item, index) => {
             const {title, image, description, noClick, slug, technologies} = item;
 
             if (noClick) {
               return (
-                <div key={`${title}-${index}`} className="pb-6">
+                <motion.div
+                  key={`${title}-${index}`}
+                  className="pb-6"
+                  variants={itemVariants}>
                   <div
                     className={classNames(
                       'relative h-max w-full overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105',
@@ -30,11 +66,14 @@ const Portfolio: FC = memo(() => {
                     <Image alt={title} className="h-full w-full" placeholder="blur" src={image} />
                     <ItemOverlay item={item} />
                   </div>
-                </div>
+                </motion.div>
               );
             } else {
               return (
-                <div key={`${title}-${index}`} className="pb-6">
+                <motion.div
+                  key={`${title}-${index}`}
+                  className="pb-6"
+                  variants={itemVariants}>
                   <div className="overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl bg-neutral-900 transition-all duration-300 hover:-translate-y-1 hover:scale-105">
                     <div className="relative">
                       <Image alt={title} className="h-full w-full object-cover" placeholder="blur" src={image} />
@@ -55,11 +94,11 @@ const Portfolio: FC = memo(() => {
                       </div>
                     </Link>
                   </div>
-                </div>
+                </motion.div>
               );
             }
           })}
-        </div>
+        </motion.div>
       </div>
     </Section>
   );
