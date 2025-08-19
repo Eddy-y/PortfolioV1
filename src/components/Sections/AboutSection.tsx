@@ -4,6 +4,7 @@ import { Badge } from "../UI/badge";
 import { Card, CardContent } from "../UI/card";
 import { motion } from "framer-motion";
 import { useToast } from "../../hooks/use-toast";
+
 import {
   FileText,
   Briefcase,
@@ -12,10 +13,13 @@ import {
   Download,
 } from "lucide-react";
 import { Links } from "../../data/links";
+import {aboutData, SectionId} from '../../data/data';
+
 
 const AboutSection = () => {
   const resumeUrl = Links.resume;
   const { toast } = useToast();
+  const {description, aboutItems} = aboutData;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -46,11 +50,11 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="py-14 relative bg-background">
-      <div className="absolute top-0 inset-x-0 h-1/2 bg-gradient-to-b from-primary/5 to-background -z-10"></div>
+    <section id="about" className="py-14 relative bg-neutral-800">
+      <div className="absolute top-0 inset-x-0 h-1/2 -z-10"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
-          className="section-heading text-center mb-12"
+          className="text-2xl font-bold text-white mb-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -69,14 +73,11 @@ const AboutSection = () => {
             variants={containerVariants}
           >
             <motion.div variants={itemVariants}>
-              <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-                <FileText className="w-5 h-5 text-primary" /> Bio
+              <h3 className="text-xl font-semibold text-white mb-2 flex items-center gap-2">
+                <FileText className="w-5 h-5" /> Bio
               </h3>
-              <p className="text-muted-foreground">
-                Software engineering student with a passion for creating
-                innovative solutions. Specializing in full-stack development, I
-                combine technical expertise with creative problem-solving to
-                build user-centric applications.
+              <p className="text-muted-foreground text-gray-300">
+                {description}
               </p>
             </motion.div>
 
@@ -88,22 +89,22 @@ const AboutSection = () => {
                   boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
                 }}
               >
-                <Card className="h-full border-primary/10 bg-card/50 backdrop-blur-sm">
+                <Card className="h-full backdrop-blur-sm">
                   <CardContent className="pt-6">
-                    <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                      <GraduationCap className="w-5 h-5 text-primary" />{" "}
+                    <h3 className="text-lg text-white font-semibold mb-3 flex items-center gap-2">
+                      <GraduationCap className="w-5 h-5" />{" "}
                       Education
                     </h3>
-                    <div className="space-y-2">
-                      <p className="font-medium">BSc in Software Engineering</p>
-                      <p className="text-sm text-muted-foreground">
-                        SLIIT (Sri Lanka Institute of Information Technology)
+                    <div className="space-y-2 text-gray-300">
+                      <p className="font-medium text-gray-300">BSc in Computer Science</p>
+                      <p className="text-sm text-gray-500">
+                        TAMU-SA (Texas A&M University - San Antonio)
                       </p>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm text-gray-500">
                         2022 - Present
                       </p>
-                      <p className="text-sm text-muted-foreground">
-                        Dean's List (2023)
+                      <p className="text-sm text-gray-500">
+                        Honors Society | Men's Volleyball Team Captain and Vicepresident | Chess Team Member | Research Assistant
                       </p>
                     </div>
                   </CardContent>
@@ -117,30 +118,30 @@ const AboutSection = () => {
                   boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
                 }}
               >
-                <Card className="h-full border-primary/10 bg-card/50 backdrop-blur-sm">
+                <Card className="h-full backdrop-blur-sm">
                   <CardContent className="pt-6">
-                    <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                      <Briefcase className="w-5 h-5 text-primary" /> Experience
+                    <h3 className="text-lg text-white font-semibold mb-3 flex items-center gap-2">
+                      <Briefcase className="w-5 h-5 text-primary " /> Experience
                     </h3>
                     <div className="space-y-4">
                       <div>
-                        <p className="font-medium">
-                          Full Stack Developer Intern
+                        <p className="font-medium text-gray-300">
+                          Data Analyst Intern
                         </p>
-                        <p className="text-sm text-muted-foreground">
-                          Twist Digital
+                        <p className="text-sm text-gray-500">
+                          Forte Innovation Consulting
                         </p>
-                        <p className="text-sm text-muted-foreground">
-                          Since March 2025
+                        <p className="text-sm text-gray-500">
+                          April 2022 - November 2022
                         </p>
                       </div>
                       <div>
-                        <p className="font-medium">Graphic Designer</p>
-                        <p className="text-sm text-muted-foreground">
-                          SLIIT Media Unit
+                        <p className="font-medium text-gray-300">Backend Developer Intern</p>
+                        <p className="text-sm text-gray-500">
+                          Forte Innovation Consulting
                         </p>
-                        <p className="text-sm text-muted-foreground">
-                          Freelance
+                        <p className="text-sm text-gray-500">
+                          January 2023 - July 2024
                         </p>
                       </div>
                     </div>
@@ -165,14 +166,14 @@ const AboutSection = () => {
             >
               <Avatar className="w-40 h-40 border-4 border-primary/20">
                 <AvatarImage
-                  src="/imgs/me.png"
-                  alt="Aathif Zahir"
+                  src="/imgs/me.jpg"
+                  alt="Eduardo Lara"
                   loading="lazy"
                 />
-                <AvatarFallback>AZ</AvatarFallback>
+                <AvatarFallback>EL</AvatarFallback>
               </Avatar>
-              <div className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                3.41 GPA
+              <div className="absolute -bottom-2 -right-2 bg-orange-500 text-gray-700 px-3 py-1 rounded-full text-sm font-semibold">
+                3.9 GPA
               </div>
             </motion.div>
 
@@ -180,8 +181,8 @@ const AboutSection = () => {
               variants={itemVariants}
               className="text-center lg:text-left"
             >
-              <h3 className="text-2xl font-bold">Aathif Zahir</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl font-bold text-white">Eduardo Lara Hurtado</h3>
+              <p className="text-gray-300">
                 Software Engineering Student
               </p>
             </motion.div>
@@ -190,16 +191,16 @@ const AboutSection = () => {
               variants={itemVariants}
               className="flex flex-wrap gap-2 justify-center lg:justify-start"
             >
-              <Badge variant="outline" className="bg-primary/10">
+              <Badge variant="outline" className="text-white">
                 React
               </Badge>
-              <Badge variant="outline" className="bg-primary/10">
+              <Badge variant="outline" className="text-white">
                 Node
               </Badge>
-              <Badge variant="outline" className="bg-primary/10">
+              <Badge variant="outline" className="text-white">
                 UI/UX
               </Badge>
-              <Badge variant="outline" className="bg-primary/10">
+              <Badge variant="outline" className="text-white">
                 Full Stack
               </Badge>
             </motion.div>
@@ -209,8 +210,8 @@ const AboutSection = () => {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >
-              <Button className="gap-2" asChild onClick={handledownload}>
-                <a href={resumeUrl} download="Aathif_Zahir_CV.pdf">
+              <Button className="bg-orange-500 text-gray-700 rounded-full text-sm" asChild onClick={handledownload}>
+                <a href={resumeUrl} download="Eduardo_Lara_CV.pdf">
                   <Download className="w-4 h-4" />
                   Download Resume
                 </a>
