@@ -5,7 +5,7 @@ import Page from '../components/Layout/Page';
 // import About from '../components/Sections/About';
 //import Contact from '../components/Sections/Contact';
 import Footer from '../components/Sections/Footer';
-import Hero from '../components/Sections/Hero';
+// import Hero from '../components/Sections/Hero';
 import Portfolio from '../components/Sections/Portfolio/Portfolio';
 import Resume from '../components/Sections/Resume';
 import Testimonials from '../components/Sections/Testimonials';
@@ -24,7 +24,7 @@ const Home: FC = memo(() => {
   return (
     <Page description={description} title={title}>
       <Header />
-      <Hero />
+      {/* <Hero /> */}
       <HeroSection/>
       <AboutSection/>
       {/* <About /> */}

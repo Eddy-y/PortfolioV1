@@ -90,11 +90,11 @@ const HeroSection = () => {
                     whileHover={{ scale: 1.2 }}
                   />
                 </div>
-                <div className="text-xs text-gray-500">developer.js</div>
+                <div className="text-xs text-gray-500">Discover patterns</div>
               </div>
 
               <div className="space-y-2 font-mono text-sm">
-                <div className="text-gray-500">{"// Software Engineer"}</div>
+                <div className="text-gray-500">{"// Data Analyst"}</div>
                 <div>
                   <span className="text-pink-600">const</span>{" "}
                   <span className="text-blue-600">developer</span>{" "}
