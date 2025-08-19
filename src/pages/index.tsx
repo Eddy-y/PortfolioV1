@@ -9,8 +9,9 @@ import Hero from '../components/Sections/Hero';
 import Portfolio from '../components/Sections/Portfolio/Portfolio';
 import Resume from '../components/Sections/Resume';
 import Testimonials from '../components/Sections/Testimonials';
-import MusicCarousel from '../components/Sections/Music';
+import MusicCarousel from '../components/Sections/music';
 import Stack from '../components/Sections/Stack'; 
+import AboutSection from '../components/Sections/AboutSection';
 import {homePageMeta, musicCarouselData, stackSection} from '../data/data'; // Import data
 
 
@@ -23,6 +24,7 @@ const Home: FC = memo(() => {
     <Page description={description} title={title}>
       <Header />
       <Hero />
+      <AboutSection/>
       <About />
       <Resume />
       <Portfolio />

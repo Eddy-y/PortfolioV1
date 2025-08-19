@@ -3,11 +3,11 @@
 import classNames from 'classnames';
 import Image from 'next/image';
 import {FC, memo, useCallback, useMemo, useRef, useState} from 'react';
-import useInterval from '../../../hooks/useInterval';
+import useInterval from '../../hooks/useInterval';
 
-import {MusicCarouselSection, Song} from '../../../data/dataDef';
-import {SectionId} from '../../../data/data';
-import Section from '../../Layout/Section';
+import {MusicCarouselSection, Song} from '../../data/dataDef';
+import {SectionId} from '../../data/data';
+import Section from '../Layout/Section';
 
 const MusicCarousel: FC<{musicCarouselData: MusicCarouselSection}> = memo(({musicCarouselData}) => {
   const {title, songs} = musicCarouselData;
