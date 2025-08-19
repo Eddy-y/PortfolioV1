@@ -13,6 +13,7 @@ import MusicCarousel from '../components/Sections/music';
 import Stack from '../components/Sections/Stack'; 
 import AboutSection from '../components/Sections/AboutSection';
 import {homePageMeta, musicCarouselData, stackSection} from '../data/data'; // Import data
+import HeroSection from '../components/Sections/HeroSection';
 
 
 // eslint-disable-next-line react-memo/require-memo
@@ -24,6 +25,7 @@ const Home: FC = memo(() => {
     <Page description={description} title={title}>
       <Header />
       <Hero />
+      <HeroSection/>
       <AboutSection/>
       {/* <About /> */}
       <Resume />
