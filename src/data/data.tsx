@@ -79,7 +79,7 @@ import morganFreemanImage from '../images/quotes/freeman.jpg';
 import violetEvergardenImage from '../images/quotes/violet.png';
 
 import RAGDescription from '../components/Sections/Portfolio/ProjectDescriptions/RagProject';
-import EstimatorDescription from '../components/Sections/Portfolio/ProjectDescriptions/RagProject';
+import EstimatorDescription from '../components/Sections/Portfolio/ProjectDescriptions/EstimatorProject';
 
 
 
@@ -104,8 +104,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: "Eddie's Resume Template",
-  description: "React Resume Site",
+  title: "Eddie's Portfolio",
+  description: "My Portfolio Site",
 };
 
 /**

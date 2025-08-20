@@ -39,13 +39,13 @@ const ProjectDetails: FC = () => {
       <div className="mx-auto p-8 pt-24 min-h-screen bg-neutral-100 ">
         <div className="mx-auto px-4 md:px-6 max-w-6xl"> 
           <div className="mb-4">
-            <h1 className="text-6xl font-bold">{project.title}</h1>
+            <h1 className="text-5xl font-bold">{project.title}</h1>
             {/* Year moved to the left below the title */}
             <div className="text-lg font-bold text-orange-500 my-4">{project.year}</div>
           </div>
           {/* Full description with padding and max width */}
           <div className="flex justify-center my-12">
-              <p className="text-neutral-600 mb-10 text orange-100">{project.fullDescription}</p>
+              <p className="normal-text mb-10 text orange-100">{project.fullDescription}</p>
           </div>
           
           {/* Render a single image centered below the text */}

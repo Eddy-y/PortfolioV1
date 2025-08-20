@@ -184,7 +184,7 @@ const AboutSection = () => {
             >
               <h3 className="text-2xl font-bold text-white">Eduardo Lara Hurtado</h3>
               <p className="text-gray-300">
-                Software Engineering Student
+                Computer Science Student
               </p>
             </motion.div>
 

@@ -42,7 +42,7 @@ const Stack: FC<{stackData: StackSection}> = memo(({stackData}) => {
         </motion.h2>
       <div className="flex flex-col gap-y-8 ">
         <p className="normal-text flex items-center gap-2">
-            A collection of technologies and tools I work with to bring ideas to life
+            Technologies I use to provide solution to persistent problems
           </p>
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full border border-gray-700 px-4 rounded-3xl"

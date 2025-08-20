@@ -110,12 +110,28 @@ const HeroSection = () => {
                   <span className="text-blue-300">'Eduardo Lara'</span>
                   <span className="text-gray-500">,</span>
                 </motion.div>
-
+                
                 <motion.div
                   className="pl-6"
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1.6, duration: 0.3 }}
+                >
+                  <span className="text-red-600">focuses</span>
+                  <span className="text-gray-500">:</span>{" "}
+                  <span className="text-purple-500">[</span>
+                  <span className="text-blue-300">'Data Analysis'</span>
+                  <span className="text-gray-500">,</span>{" "}
+                  <span className="text-blue-300">'Data Engineering'</span>
+                  <span className="text-purple-500">]</span>
+                  <span className="text-gray-500">,</span>
+                </motion.div>
+
+                <motion.div
+                  className="pl-6"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 1.8, duration: 0.3 }}
                 >
                   <span className="text-red-600">skills</span>
                   <span className="text-gray-500">:</span>{" "}
@@ -128,22 +144,6 @@ const HeroSection = () => {
                   <span className="text-purple-500">]</span>
                   <span className="text-gray-500">,</span>
                 </motion.div>
-                
-                <motion.div
-                  className="pl-6"
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 1.8, duration: 0.3 }}
-                >
-                  <span className="text-red-600">focuses</span>
-                  <span className="text-gray-500">:</span>{" "}
-                  <span className="text-purple-500">[</span>
-                  <span className="text-blue-300">'Data Analysis'</span>
-                  <span className="text-gray-500">,</span>{" "}
-                  <span className="text-blue-300">'Data Management'</span>
-                  <span className="text-purple-500">]</span>
-                  <span className="text-gray-500">,</span>
-                </motion.div>
 
                 <motion.div
                   className="pl-6"
@@ -151,9 +151,9 @@ const HeroSection = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 2.0, duration: 0.3 }}
                 >
-                  <span className="text-red-600">learning</span>
+                  <span className="text-red-600">curiosity</span>
                   <span className="text-gray-500">:</span>{" "}
-                  <span className="text-blue-300">'Always'</span>
+                  <span className="text-blue-300">'A lot'</span>
                 </motion.div>
 
                 <div>
