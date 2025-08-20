@@ -34,22 +34,21 @@ const Portfolio: FC = memo(() => {
   };
   return (
     <Section className="backgroundColor" sectionId={SectionId.Portfolio}>
-      <div className="flex flex-col gap-y-8">
-        <motion.h2
-          className="title"
+      <motion.h2
+          className="title section-heading"
           initial="hidden"
           whileInView="visible"
           viewport={{once: true, amount: 0.2}}
           variants={itemVariants}>
-          My projects - and Dogs
+          Projects
         </motion.h2>
+      <div className="flex flex-col gap-y-8">
         <p className="normal-text flex items-center gap-2">
-            Here are some of the projects I've worked on, showcasing my skills in
-            various technologies and problem domains.
+            These are the some of the projects I've worked on over time, I've also included some images of my dogs in case you get bored.
           </p>
         {/* <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"> */}
         <motion.div
-          className="w-full columns-1 md:columns-2 lg:columns-3"
+          className="w-full columns-1 md:columns-2 lg:columns-4"
           initial="hidden"
           whileInView="visible"
           viewport={{once: true, amount: 0.2}}

@@ -12,7 +12,7 @@ import Testimonials from '../components/Sections/Testimonials';
 // import MusicCarousel from '../components/Sections/music';
 import Stack from '../components/Sections/Stack'; 
 import AboutSection from '../components/Sections/AboutSection';
-import {homePageMeta, musicCarouselData, stackSection} from '../data/data'; // Import data
+import {homePageMeta, stackSection} from '../data/data'; // Import data
 import HeroSection from '../components/Sections/HeroSection';
 
 

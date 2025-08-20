@@ -32,15 +32,15 @@ const Stack: FC<{stackData: StackSection}> = memo(({stackData}) => {
 
   return (
     <Section className="backgroundColor" sectionId={SectionId.Stack}>
-      <div className="flex flex-col gap-y-8 ">
-        <motion.h2
-          className="title"
+      <motion.h2
+          className="title section-heading"
           initial="hidden"
           whileInView="visible"
           viewport={{once: true, amount: 0.2}}
           variants={itemVariants}>
           {title}
         </motion.h2>
+      <div className="flex flex-col gap-y-8 ">
         <p className="normal-text flex items-center gap-2">
             A collection of technologies and tools I work with to bring ideas to life
           </p>

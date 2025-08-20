@@ -51,11 +51,11 @@ const AboutSection = () => {
   };
 
   return (
-    <Section className="relative bg-neutral-900" sectionId={SectionId.About}>
-      <div className="absolute top-0 inset-x-0 h-1/2 -z-10"></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Section className="relative bg-neutral-900" sectionId={SectionId.About} noPadding>
+      <div className="absolute top-0 inset-x-0 h-1/2 -z-10 "></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 md:grid-cols-3 md:pb-24">
         <motion.h2
-          className="title mb-12"
+          className="title section-heading mb-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}

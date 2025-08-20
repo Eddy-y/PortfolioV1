@@ -168,12 +168,12 @@ const HeroSection = () => {
         
         <div className="flex flex-col max-w-xl space-y-6 text-center lg:text-left">
           <motion.span
-            className="text-sm md:text-base font-medium text-white opacity-90"
+            className="text-sm md:text-base font-medium text-orange-500 opacity-90"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Hey! I'm
+            Howdy! I'm
           </motion.span>
 
           <motion.h1
