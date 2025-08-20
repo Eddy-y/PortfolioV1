@@ -224,9 +224,9 @@ const HeroSection = () => {
                 whileTap={{ scale: 0.95 }}
                 className="touch-target"
               >
-                <a href="#contact" aria-label="Go to contact section">
+                <a href="#stack" aria-label="Go to stack section">
                   <Button className="min-w-[120px] py-4 bg-orange-600">
-                    Contact Me
+                    My Stack
                   </Button>
                 </a>
               </motion.div>

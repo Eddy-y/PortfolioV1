@@ -6,11 +6,18 @@ import {
   FlagIcon,
   MapIcon,
   SparklesIcon,
+  PuzzlePieceIcon,
+  GlobeAsiaAustraliaIcon,
+  BookOpenIcon,
+  UsersIcon,
+  CodeBracketIcon,
+  FireIcon
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
+import MailIcon from '../components/Icon/MailIcon';
 {/*import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';*/}
 import heroImage from '../images/VolleyballBack.jpg';
@@ -89,7 +96,8 @@ import {
   StackSection,
   TestimonialSection,
   TimelineItem,
-  MusicCarouselSection, // Import the new interface
+  MusicCarouselSection, 
+  HobbiesSection,
 } from './dataDef';
 
 /**
@@ -114,6 +122,7 @@ export const SectionId = {
   Stack: 'stack',
   Testimonials: 'testimonials',
   Music: 'music',
+  Hobbies: 'hobbies',
 } as const;
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
@@ -547,7 +556,7 @@ export const socialLinks: Social[] = [
   /*{label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},*/
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/eduardo-lara-hurtado-612233281/'},
   {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/eddy_larah/'},
-  /*{label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/Eddy_larah'},*/
+  {label: 'Email', Icon: MailIcon, href: "mailto:eduardolh383@gmail.com"}
 ];
 
 
@@ -582,5 +591,41 @@ export const musicCarouselData: MusicCarouselSection = {
       spotifyUrl: 'https://open.spotify.com/track/2DLrgv7HhJanCuD8L9uJLR?si=f89c59f4dba24dcc',
     },
     
+  ],
+};
+
+export const hobbiesData: HobbiesSection = {
+  title: 'Hobbies',
+  items: [
+    {
+      title: 'Chess',
+      description: 'Love strategy and mind-burner games',
+      Icon: PuzzlePieceIcon,
+    },
+    {
+      title: 'Volleyball',
+      description: 'Getting to enjoy and compete in volleyball',
+      Icon: UsersIcon,
+    },
+    {
+      title: 'Weightlifting',
+      description: 'Enjoy a good pump. Man move heavy circle, man Happy',
+      Icon: FireIcon,
+    },
+    {
+      title: 'Board Games',
+      description: 'Many good stories, moments and laughs with friends',
+      Icon: UsersIcon,
+    },
+    {
+      title: 'Coding Challenges',
+      description: 'Getting to tap into the flow and create new things',
+      Icon: CodeBracketIcon,
+    },
+    {
+      title: 'Traveling',
+      description: 'Little cliche but always fun with the right people',
+      Icon: GlobeAsiaAustraliaIcon,
+    },
   ],
 };

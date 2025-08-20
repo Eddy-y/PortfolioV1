@@ -4,6 +4,8 @@ import {FC, memo} from 'react';
 
 import {SectionId} from '../../data/data';
 import Socials from '../Socials';
+import { Links } from '../../data/links';
+
 
 const currentYear = new Date().getFullYear();
 
@@ -20,6 +22,7 @@ const Footer: FC<{className?: string}> = memo(({className}) => (
       <div className="flex gap-x-4 text-neutral-500">
         <Socials />
       </div>
+      
       {/*<a
         className="-m-2 flex items-center gap-x-1 rounded-md p-2 ring-yellow focus:outline-none focus:ring-2"
         href="https://reactresume.com">

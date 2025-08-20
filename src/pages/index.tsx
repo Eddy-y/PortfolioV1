@@ -11,8 +11,9 @@ import Portfolio from '../components/Sections/Portfolio/Portfolio';
 import Testimonials from '../components/Sections/Testimonials';
 // import MusicCarousel from '../components/Sections/music';
 import Stack from '../components/Sections/Stack'; 
+import Hobbies from '../components/Sections/Hobbies';
 import AboutSection from '../components/Sections/AboutSection';
-import {homePageMeta, stackSection} from '../data/data'; // Import data
+import {hobbiesData, homePageMeta, stackSection} from '../data/data'; 
 import HeroSection from '../components/Sections/HeroSection';
 
 
@@ -31,6 +32,7 @@ const Home: FC = memo(() => {
       {/* <Resume /> */}
       <Portfolio />
       <Stack stackData={stackSection} />
+      <Hobbies hobbiesData={hobbiesData} /> {/* Add the new section here */}
       <Testimonials />
       {/* <MusicCarousel musicCarouselData={musicCarouselData} /> */}
       {/*<Contact />*/}

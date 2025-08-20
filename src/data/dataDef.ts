@@ -202,3 +202,18 @@ export interface Social {
   Icon: FC<IconProps>;
   href: string;
 }
+
+/**
+ * Hobbies section
+ */
+export interface HobbyItem {
+  title: string;
+  description: string;
+  Icon: ForwardRefExoticComponent<Omit<SVGProps<SVGSVGElement>, 'ref'>>; // Add this line
+
+}
+
+export interface HobbiesSection {
+  title: string;
+  items: HobbyItem[];
+}
