@@ -7,7 +7,7 @@ import useInterval from '../../hooks/useInterval';
 
 import {MusicCarouselSection, Song} from '../../data/dataDef';
 import {SectionId} from '../../data/data';
-import Section from '../Layout/Section';
+import Section from '../Layout/Section_Resume';
 
 const MusicCarousel: FC<{musicCarouselData: MusicCarouselSection}> = memo(({musicCarouselData}) => {
   const {title, songs} = musicCarouselData;
@@ -33,9 +33,9 @@ const MusicCarousel: FC<{musicCarouselData: MusicCarouselSection}> = memo(({musi
   const transformValue = `translateX(-${(activeIndex * (100 / itemsToShow))}%)`;
 
   return (
-    <Section className="bg-neutral-800" sectionId={SectionId.Music}>
+    <Section className="backgroundColor" sectionId={SectionId.Music}>
       <div className="flex flex-col gap-y-8">
-        <h2 className="self-center text-xl font-bold text-white">{title}</h2>
+        <h2 className="self-center title">{title}</h2>
         <div className="relative overflow-hidden">
           <div
             ref={scrollContainer}

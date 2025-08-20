@@ -36,7 +36,7 @@ const ProjectDetails: FC = () => {
   return (
     <Page title={`${project.title} | ${homePageMeta.title}`} description={pageDescription}>
       <Header />
-      <div className="container mx-auto p-8 pt-24 min-h-screen bg-neutral-100 ">
+      <div className="mx-auto p-8 pt-24 min-h-screen bg-neutral-100 ">
         <div className="mx-auto px-4 md:px-6 max-w-6xl"> 
           <div className="mb-4">
             <h1 className="text-6xl font-bold">{project.title}</h1>

@@ -51,11 +51,11 @@ const AboutSection = () => {
   };
 
   return (
-    <Section className="py-14 relative bg-neutral-800" sectionId={SectionId.About}>
+    <Section className="relative bg-neutral-900" sectionId={SectionId.About}>
       <div className="absolute top-0 inset-x-0 h-1/2 -z-10"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
-          className="text-2xl font-bold text-white mb-12"
+          className="title mb-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -75,9 +75,9 @@ const AboutSection = () => {
           >
             <motion.div variants={itemVariants}>
               <h3 className="text-xl font-semibold text-white mb-2 flex items-center gap-2">
-                <FileText className="w-5 h-5" /> Bio
+                <FileText className="w-5 h-5 text-orange-500" /> Bio
               </h3>
-              <p className="text-muted-foreground text-gray-300">
+              <p className="normal-text text-base">
                 {description}
               </p>
             </motion.div>
@@ -90,21 +90,21 @@ const AboutSection = () => {
                   boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
                 }}
               >
-                <Card className="h-full backdrop-blur-sm">
+                <Card className="h-full backdrop-blur-sm bg-neutral-800 border border-gray-400">
                   <CardContent className="pt-6">
                     <h3 className="text-lg text-white font-semibold mb-3 flex items-center gap-2">
-                      <GraduationCap className="w-5 h-5" />{" "}
+                      <GraduationCap className="w-5 h-5 text-orange-500" />{" "}
                       Education
                     </h3>
-                    <div className="space-y-2 text-gray-300">
-                      <p className="font-medium text-gray-300">BSc in Computer Science</p>
-                      <p className="text-sm text-gray-500">
+                    <div className="space-y-2">
+                      <p className="font-medium text-white">BSc in Computer Science</p>
+                      <p className="text-sm normal-text">
                         TAMU-SA (Texas A&M University - San Antonio)
                       </p>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm normal-text">
                         2022 - Present
                       </p>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm normal-text">
                         Honors Society | Men's Volleyball Team Captain and Vicepresident | Chess Team Member | Research Assistant
                       </p>
                     </div>
@@ -119,29 +119,29 @@ const AboutSection = () => {
                   boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
                 }}
               >
-                <Card className="h-full backdrop-blur-sm">
+                <Card className="h-full backdrop-blur-sm bg-neutral-800 border border-gray-400">
                   <CardContent className="pt-6">
                     <h3 className="text-lg text-white font-semibold mb-3 flex items-center gap-2">
-                      <Briefcase className="w-5 h-5 text-primary " /> Experience
+                      <Briefcase className="w-5 h-5 text-primary text-orange-500" /> Experience
                     </h3>
                     <div className="space-y-4">
                       <div>
-                        <p className="font-medium text-gray-300">
+                        <p className="font-medium text-white">
                           Data Analyst Intern
                         </p>
-                        <p className="text-sm text-gray-500">
+                        <p className="text-sm normal-text">
                           Forte Innovation Consulting
                         </p>
-                        <p className="text-sm text-gray-500">
+                        <p className="text-sm normal-text">
                           April 2022 - November 2022
                         </p>
                       </div>
                       <div>
                         <p className="font-medium text-gray-300">Backend Developer Intern</p>
-                        <p className="text-sm text-gray-500">
+                        <p className="text-sm normal-text">
                           Forte Innovation Consulting
                         </p>
-                        <p className="text-sm text-gray-500">
+                        <p className="text-sm normal-text">
                           January 2023 - July 2024
                         </p>
                       </div>
@@ -173,7 +173,7 @@ const AboutSection = () => {
                 />
                 <AvatarFallback>EL</AvatarFallback>
               </Avatar>
-              <div className="absolute -bottom-2 -right-2 bg-orange-500 text-gray-700 px-3 py-1 rounded-full text-sm font-semibold">
+              <div className="absolute -bottom-2 -right-2 bg-orange-500 text-gray-900 px-3 py-1 rounded-full text-sm font-semibold">
                 3.9 GPA
               </div>
             </motion.div>
@@ -192,16 +192,16 @@ const AboutSection = () => {
               variants={itemVariants}
               className="flex flex-wrap gap-2 justify-center lg:justify-start"
             >
-              <Badge variant="outline" className="text-white">
+              <Badge variant="outline" className="text-white bg-stone-800">
                 Python
               </Badge>
-              <Badge variant="outline" className="text-white">
+              <Badge variant="outline" className="text-white bg-stone-800">
                 Pandas
               </Badge>
-              <Badge variant="outline" className="text-white">
+              <Badge variant="outline" className="text-white bg-stone-800">
                 Power BI
               </Badge>
-              <Badge variant="outline" className="text-white">
+              <Badge variant="outline" className="text-white bg-stone-800">
                 ETL
               </Badge>
             </motion.div>
@@ -211,7 +211,7 @@ const AboutSection = () => {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >
-              <Button className="bg-orange-500 text-gray-700 rounded-full text-sm" asChild onClick={handledownload}>
+              <Button className="bg-orange-500 text-gray-900 rounded-full text-sm" asChild onClick={handledownload}>
                 <a href={resumeUrl} download="Eduardo_Lara_CV.pdf">
                   <Download className="w-4 h-4" />
                   Download Resume

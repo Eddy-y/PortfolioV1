@@ -51,3 +51,47 @@ th {
 }
 
 
+@layer base {
+  html {
+    @apply h-full scroll-smooth;
+  }
+}
+
+@layer components {
+  /* Standard styles for titles */
+  .title {
+    @apply text-4xl font-bold text-white;
+    
+  }
+
+  /* Standard styles for subtitles */
+  .subtitle {
+    @apply text-xl font-semibold text-white;
+  }
+
+  /* Standard styles for normal text */
+  .normal-text {
+    @apply text-gray-400;
+    @apply text-lg;
+    @apply font-normal;
+  }
+
+  /* Standard styles for orange text */
+  .orange-text {
+    @apply text-orange-600;
+  }
+
+  .backgroundColor {
+    @apply bg-neutral-900;
+  }
+}
+
+.timeline::before {
+  content: '';
+  @apply bg-neutral-600 absolute h-full w-0.5 md:left-2/4 -translate-x-1/2 rounded md:translate-x-0;
+}
+
+.timeline::after {
+  content: '';
+  @apply bg-neutral-600 absolute h-2 w-2 rounded-full md:left-2/4 md:-translate-x-1/2 md:translate-x-0;
+}

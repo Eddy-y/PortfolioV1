@@ -31,25 +31,28 @@ const Stack: FC<{stackData: StackSection}> = memo(({stackData}) => {
   };
 
   return (
-    <Section className="bg-neutral-800" sectionId={SectionId.Stack}>
-      <div className="flex flex-col items-center gap-y-8 ">
+    <Section className="backgroundColor" sectionId={SectionId.Stack}>
+      <div className="flex flex-col gap-y-8 ">
         <motion.h2
-          className="self-center text-6xl font-bold text-white"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{once: true, amount: 0.2}}
-          variants={itemVariants}>
-          {title}
-        </motion.h2>
+          className="title"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{once: true, amount: 0.2}}
+          variants={itemVariants}>
+          {title}
+        </motion.h2>
+        <p className="normal-text flex items-center gap-2">
+            A collection of technologies and tools I work with to bring ideas to life
+          </p>
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full shadow-lg shadow-orange-500 px-4"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{once: true, amount: 0.2}}
-          variants={containerVariants}>
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full border border-gray-700 px-4 rounded-3xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{once: true, amount: 0.2}}
+          variants={containerVariants}>
             {groups.map((group, groupIndex) => (
-            <div key={groupIndex} className="rounded-lg shadow-lg p-6 flex flex-col gap-y-4">
-              <h3 className="text-lg font-bold text-white text-center">{group.name}</h3>
+            <div key={groupIndex} className="rounded-lg  p-6 flex flex-col gap-y-4">
+              <h3 className="subtitle ">{group.name}</h3>
               <div className="grid grid-cols-3 gap-4">
                 {group.items.map((item, itemIndex) => (
                   <a
@@ -58,7 +61,7 @@ const Stack: FC<{stackData: StackSection}> = memo(({stackData}) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={classNames(
-                      'flex flex-col items-center gap-y-2 transition-all duration-300 hover:scale-110 bg-neutral-700 rounded-lg p-4', // Added background here
+                      'flex flex-col items-center gap-y-2 transition-all duration-300 hover:scale-110 bg-neutral-800 rounded-xl p-4', // Added background here
                       item.href ? 'cursor-pointer' : 'cursor-default'
                     )}>
                     {item.imageSrc && (

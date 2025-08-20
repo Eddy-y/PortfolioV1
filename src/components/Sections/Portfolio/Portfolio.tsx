@@ -9,7 +9,7 @@ import {isMobile} from '../../../config';
 import {portfolioItems, SectionId} from '../../../data/data';
 import {PortfolioItem} from '../../../data/dataDef';
 import useDetectOutsideClick from '../../../hooks/useDetectOutsideClick';
-import Section from '../../Layout/Section';
+import Section from '../../Layout/Section_Resume';
 
 const Portfolio: FC = memo(() => {
   const containerVariants = {
@@ -23,42 +23,46 @@ const Portfolio: FC = memo(() => {
   };
 
   const itemVariants = {
-    hidden: {opacity: 0, y: 70},
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
+    hidden: {opacity: 0, y: 70},
+    visible: {
+     opacity: 1,
+      y: 0,
+      transition: {
+      duration: 0.5,
+     },
+    },
   };
   return (
-    <Section className="bg-neutral-800" sectionId={SectionId.Portfolio}>
+    <Section className="backgroundColor" sectionId={SectionId.Portfolio}>
       <div className="flex flex-col gap-y-8">
         <motion.h2
-          className="self-center text-6xl font-bold text-white"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{once: true, amount: 0.2}}
-          variants={itemVariants}>
-          My projects - and Dogs
-        </motion.h2>
+          className="title"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{once: true, amount: 0.2}}
+          variants={itemVariants}>
+          My projects - and Dogs
+        </motion.h2>
+        <p className="normal-text flex items-center gap-2">
+            Here are some of the projects I've worked on, showcasing my skills in
+            various technologies and problem domains.
+          </p>
         {/* <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"> */}
         <motion.div
-          className="w-full columns-1 md:columns-2 lg:columns-3"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{once: true, amount: 0.2}}
-          variants={containerVariants}>
+          className="w-full columns-1 md:columns-2 lg:columns-3"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{once: true, amount: 0.2}}
+          variants={containerVariants}>
           {portfolioItems.map((item, index) => {
             const {title, image, description, noClick, slug, technologies} = item;
 
             if (noClick) {
               return (
                 <motion.div
-                  key={`${title}-${index}`}
-                  className="pb-6"
-                  variants={itemVariants}>
+                  key={`${title}-${index}`}
+                  className="pb-6"
+                  variants={itemVariants}>
                   <div
                     className={classNames(
                       'relative h-max w-full overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl transition-all duration-300 hover:-translate-y-1 hover:scale-105',
@@ -71,10 +75,10 @@ const Portfolio: FC = memo(() => {
             } else {
               return (
                 <motion.div
-                  key={`${title}-${index}`}
-                  className="pb-6"
-                  variants={itemVariants}>
-                  <div className="overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl bg-neutral-900 transition-all duration-300 hover:-translate-y-1 hover:scale-105">
+                  key={`${title}-${index}`}
+                  className="pb-6"
+                  variants={itemVariants}>
+                  <div className="overflow-hidden rounded-lg shadow-lg shadow-black/30 lg:shadow-xl bg-neutral-800 transition-all duration-300 hover:-translate-y-1 hover:scale-105 border border-gray-700">
                     <div className="relative">
                       <Image alt={title} className="h-full w-full object-cover" placeholder="blur" src={image} />
                     </div>
@@ -84,13 +88,13 @@ const Portfolio: FC = memo(() => {
                         {technologies && (
                           <div className="mt-2 flex flex-wrap justify-start gap-2">
                             {technologies.map((tech, techIndex) => (
-                              <span key={techIndex} className="rounded-full bg-black px-2 py-1 text-xs text-white border border-orange-500">
+                              <span key={techIndex} className="rounded-full bg-neutral-800 px-2 py-1 text-xs text-white border border-orange-500">
                                 {tech}
                               </span>
                             ))}
                           </div>
                         )}
-                        <p className="mt-2 text-sm text-neutral-300">{description}</p>
+                        <p className="mt-2 text-sm normal-text">{description}</p>
                       </div>
                     </Link>
                   </div>
