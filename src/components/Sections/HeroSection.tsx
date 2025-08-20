@@ -14,7 +14,7 @@ const HeroSection = () => {
 
       {/* Animated background elements */}
       <motion.div
-        className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-400/5 rounded-full blur-3xl"
+        className="absolute top-1/4 right-1/4 w-80 h-80 bg-orange-200 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.1, 1],
           opacity: [0.5, 0.7, 0.5],
@@ -27,7 +27,7 @@ const HeroSection = () => {
       />
 
       <motion.div
-        className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-blue-400/5 rounded-full blur-3xl"
+        className="absolute bottom-1/4 left-1/4 w-64 h-64  rounded-full blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.3, 0.5, 0.3],
@@ -55,7 +55,7 @@ const HeroSection = () => {
         >
           <div className="relative">
             <motion.div
-              className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-primary/5 rounded-2xl"
+              className="absolute inset-0 bg-orange-500 rounded-2xl"
               animate={{ rotate: [0, 6, 0] }}
               transition={{
                 duration: 6,
@@ -249,7 +249,7 @@ const HeroSection = () => {
             </motion.div>
 
             {/* Social Links */}
-            <div className="flex items-center gap-4 ml-0 lg:ml-4 mt-4 lg:mt-0">
+            <div className="flex items-center gap-4 ml-0 lg:ml-4 mt-4 lg:mt-0 text-white">
               <Socials/>
             </div>
           </motion.div>
