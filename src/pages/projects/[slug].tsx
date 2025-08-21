@@ -50,11 +50,11 @@ const ProjectDetails: FC = () => {
           
           {/* Render a single image centered below the text */}
           {project.images && project.images.length > 0 && (
-            <div key={0} className="relative mx-auto w-full max-w-xl h-80 rounded-lg overflow-hidden shadow-xl">
+            <div key={0} className="relative mx-auto w-full max-w-xl rounded-lg ">
               <Image 
                 src={project.images[0]} 
                 alt={`${project.title} - Image 1`}
-                layout="fill"
+                layout="responsive"
                 objectFit="cover"
               />
             </div>

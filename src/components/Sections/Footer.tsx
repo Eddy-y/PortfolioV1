@@ -4,7 +4,6 @@ import {FC, memo} from 'react';
 
 import {SectionId} from '../../data/data';
 import Socials from '../Socials';
-import { Links } from '../../data/links';
 
 
 const currentYear = new Date().getFullYear();

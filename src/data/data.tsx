@@ -8,7 +8,6 @@ import {
   SparklesIcon,
   PuzzlePieceIcon,
   GlobeAsiaAustraliaIcon,
-  BookOpenIcon,
   UsersIcon,
   CodeBracketIcon,
   FireIcon
@@ -22,16 +21,21 @@ import MailIcon from '../components/Icon/MailIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';*/}
 import heroImage from '../images/VolleyballBack.jpg';
 
+//DISPLAY PROJECT IMAGES
 import RAG_img from '../images/portfolio/RAG.png';
 import estimator_img from '../images/portfolio/Estimator.png';
-
-import RAG_img2 from '../images/Projects/RAG.png'
-import estimator_img2 from '../images/Projects/Estimator.png'
-
-//import thunder_img from '../images/portfolio//Thunder.jpg';
-import thunder2_img from '../images/portfolio//Thunder2.jpg';
+import thunder_img from '../images/portfolio//Thunder2.jpg';
 import chucho_img from '../images/portfolio//Chucho.jpg';
 import chai_img from '../images/portfolio//Chai.jpg';
+import optic_img from '../images/portfolio//Optic.png';
+import bellabeat_img from '../images/portfolio/Bellabeat.png';
+
+//SPECIFIC PROJECT IMAGES
+import bookshelf_img from '../images/Projects/bookshelf.png'
+import book_img from '../images/Projects/book.png'
+import glasses_img from '../images/Projects/Glasses.png'
+import watch_img from '../images/Projects/Watch.png'
+
 
 import javascript from '../images/stack/javascript.png'
 import c from '../images/stack/c.png'
@@ -80,6 +84,8 @@ import violetEvergardenImage from '../images/quotes/violet.png';
 
 import RAGDescription from '../components/Sections/Portfolio/ProjectDescriptions/RagProject';
 import EstimatorDescription from '../components/Sections/Portfolio/ProjectDescriptions/EstimatorProject';
+import OptikDescription from '../components/Sections/Portfolio/ProjectDescriptions/OpticProject';
+import BellabeatDescription from '../components/Sections/Portfolio/ProjectDescriptions/BellabeatProject';
 
 
 
@@ -166,9 +172,10 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `My skills include data analysis, visualization and management. 
-  I have experience creating ETL pipelines, Power BI dashboards, and have built a Retrieval Augmented 
-  Generation (RAG) systems. I like to think of me as a cheerful individual who enjoys playing volleyball and going to the gym.`,
+  description: `Computer Science student who’s passionate about software development and data analysis, 
+  I'm always looking for a way to make sense of what doesn't, seeking constantly that feeling of going “Ohhh now it makes sense”. 
+  When I'm not working with data, you can find me playing volleyball or chess!`,
+
   aboutItems: [
     {label: 'Location', text: 'San Antonio, Tx', Icon: MapIcon},
     {label: 'Age', text: '22', Icon: CalendarIcon},
@@ -374,7 +381,7 @@ export const portfolioItems: PortfolioItem[] = [
     fullDescription:<RAGDescription />,
     slug:'Rag',
     image: RAG_img,
-    images:[RAG_img2],
+    images:[bookshelf_img],
     technologies: ['Python','Pinecone', 'OpenAI','Langchain'],
     repoUrl:'https://github.com/Eddy-y/RAG_PoC_Public',
     year: '2024'
@@ -384,7 +391,7 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'Thunder',
     description: '',
     slug:'Thunder',
-    image: thunder2_img,
+    image: thunder_img,
     noClick: true,
   },
 
@@ -394,7 +401,7 @@ export const portfolioItems: PortfolioItem[] = [
     fullDescription:<EstimatorDescription />,
     slug:'Estimator',
     image: estimator_img,
-    images:[estimator_img2],
+    images:[book_img],
     technologies:['Python','Streamlit','OpenAI','Pandas'],
     repoUrl:'https://github.com/Eddy-y/ProjectEstimatorPublic',
     year: '2024'
@@ -407,12 +414,34 @@ export const portfolioItems: PortfolioItem[] = [
     noClick: true,
   },
   {
+    title: 'Optica-Qualite System',
+    description: 'Data management platform that allows employees to manage client data, product inventory, sales, and payments efficiently.',
+    fullDescription:<OptikDescription />,
+    slug:'Optik',
+    image: optic_img,
+    images:[glasses_img],
+    technologies:['Html','Java','MySQL','Javascript'],
+    repoUrl:'https://github.com/Eddy-y/optik.git',
+    year: '2023'
+  },
+  {
     title: 'Chai',
     description: '',
     slug:'Chai',
     image: chai_img,
     noClick: true,
   },  
+  {
+    title: 'Bellabeat Study Case',
+    description: 'Data analysis of smart device usage to inform Bellabeat\'s marketing strategy.',
+    fullDescription:<BellabeatDescription />,
+    slug:'Bellabeat',
+    image: bellabeat_img,
+    images:[watch_img],
+    technologies:['R','Tidyverse','ggplot2','Data'],
+    repoUrl:'https://www.kaggle.com/code/eduardolarahurtado/bellabeat-s-study-case',
+    year: '2023'
+  },
   
 ];
 
