@@ -7,7 +7,7 @@ import {HomepageMeta} from '../../data/dataDef';
 
 const Page: NextPage<PropsWithChildren<HomepageMeta>> = memo(({children, title, description}) => {
   const {asPath: pathname} = useRouter();
-  const siteDomain = 'https://Eddy-Lara.com';
+  const siteDomain = 'https://Eddy-y.github.io/';
 
   return (
     <>
