@@ -12,97 +12,83 @@ import {
   CodeBracketIcon,
   FireIcon
 } from '@heroicons/react/24/outline';
-
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import MailIcon from '../components/Icon/MailIcon';
-{/*import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';*/}
 import heroImage from '../images/VolleyballBack.jpg';
-
 //DISPLAY PROJECT IMAGES
 import RAG_img from '../images/portfolio/RAG.png';
 import estimator_img from '../images/portfolio/Estimator.png';
-import thunder_img from '../images/portfolio//Thunder2.jpg';
-import chucho_img from '../images/portfolio//Chucho.jpg';
-import chai_img from '../images/portfolio//Chai.jpg';
-import optic_img from '../images/portfolio//Optic.png';
+import thunder_img from '../images/portfolio/Thunder2.jpg';
+import chucho_img from '../images/portfolio/Chucho.jpg';
+import chai_img from '../images/portfolio/Chai.jpg';
+import optic_img from '../images/portfolio/Optic.png';
 import bellabeat_img from '../images/portfolio/Bellabeat.png';
-
 //SPECIFIC PROJECT IMAGES
-import bookshelf_img from '../images/Projects/bookshelf.png'
-import book_img from '../images/Projects/book.png'
-import glasses_img from '../images/Projects/Glasses.png'
-import watch_img from '../images/Projects/Watch.png'
-
-
-import javascript from '../images/stack/javascript.png'
-import c from '../images/stack/c.png'
-import python from '../images/stack/python.png'
-import java from '../images/stack/java.png'
-import r from '../images/stack/r.png'
-import html from '../images/stack/html.png'
-import css from '../images/stack/css.png'
-import bootstrap from '../images/stack/bootstrap.png'
-import pinecone from '../images/stack/pinecone.png'
-import langchain from '../images/stack/langchain.png'
-import pytorch from '../images/stack/python.png'
-import pandas from '../images/stack/pandas.png'
-import numpy from '../images/stack/numpy.png'
-import matplotlib from '../images/stack/matplotlib.png'
-import streamlit from '../images/stack/streamlit.png'
-import scikit from '../images/stack/scikit.png'
-import sqlserver from '../images/stack/sqlserver.png'
-import postgresql from '../images/stack/postgresql.png'
-import mysql from '../images/stack/mysql.png'
-import mongodb from '../images/stack/mongodb.png'
-import git from '../images/stack/git.png'
-import github from '../images/stack/github.png'
-import vscode from '../images/stack/vscode.png'
-import postman from '../images/stack/postman.png'
-import intellij from '../images/stack/intellij.png'
-import netbeans from '../images/stack/netbeans.png'
-import azure from '../images/stack/azure.png'
-import aws from '../images/stack/aws.png'
-import docker from '../images/stack/docker.png'
-import openai from '../images/stack/openai.png'
-import huggingface from '../images/stack/huggingface.png'
-import jupyter from '../images/stack/jupyter.png'
-
-
+import bookshelf_img from '../images/Projects/bookshelf.png';
+import book_img from '../images/Projects/book.png';
+import glasses_img from '../images/Projects/Glasses.png';
+import watch_img from '../images/Projects/Watch.png';
+import javascript from '../images/stack/javascript.png';
+import c from '../images/stack/c.png';
+import python from '../images/stack/python.png';
+import java from '../images/stack/java.png';
+import r from '../images/stack/r.png';
+import html from '../images/stack/html.png';
+import css from '../images/stack/css.png';
+import bootstrap from '../images/stack/bootstrap.png';
+import pinecone from '../images/stack/pinecone.png';
+import langchain from '../images/stack/langchain.png';
+import pytorch from '../images/stack/python.png';
+import pandas from '../images/stack/pandas.png';
+import numpy from '../images/stack/numpy.png';
+import matplotlib from '../images/stack/matplotlib.png';
+import streamlit from '../images/stack/streamlit.png';
+import scikit from '../images/stack/scikit.png';
+import sqlserver from '../images/stack/sqlserver.png';
+import postgresql from '../images/stack/postgresql.png';
+import mysql from '../images/stack/mysql.png';
+import mongodb from '../images/stack/mongodb.png';
+import git from '../images/stack/git.png';
+import github from '../images/stack/github.png';
+import vscode from '../images/stack/vscode.png';
+import postman from '../images/stack/postman.png';
+import intellij from '../images/stack/intellij.png';
+import netbeans from '../images/stack/netbeans.png';
+import azure from '../images/stack/azure.png';
+import aws from '../images/stack/aws.png';
+import docker from '../images/stack/docker.png';
+import openai from '../images/stack/openai.png';
+import huggingface from '../images/stack/huggingface.png';
+import jupyter from '../images/stack/jupyter.png';
 import dieWithASmileImage from '../images/songs/DieWithASmile.png';
 import zenzenzenseImage from '../images/songs/Zenzenzense.jpg';
 import theNightsImage from '../images/songs/TheNights.jpg';
 import testDriveImage from '../images/songs/TestDrive.jpg';
-
 import profilepic from '../images/me.jpg';
 import testimonialImage from '../images/Chess2.jpg';
 import fuegoleonImage from '../images/quotes/fuegoleon.jpg';
 import morganFreemanImage from '../images/quotes/freeman.jpg';
 import violetEvergardenImage from '../images/quotes/violet.png';
-
 import RAGDescription from '../components/Sections/Portfolio/ProjectDescriptions/RagProject';
 import EstimatorDescription from '../components/Sections/Portfolio/ProjectDescriptions/EstimatorProject';
 import OptikDescription from '../components/Sections/Portfolio/ProjectDescriptions/OpticProject';
 import BellabeatDescription from '../components/Sections/Portfolio/ProjectDescriptions/BellabeatProject';
-
-
-
 import {
   About,
+  AdditionalSkillSection,
   ContactSection,
   ContactType,
   Hero,
   HomepageMeta,
   PortfolioItem,
   SkillGroup,
-  AdditionalSkillSection,
   Social,
   StackSection,
   TestimonialSection,
   TimelineItem,
-  MusicCarouselSection, 
+  MusicCarouselSection,
   HobbiesSection,
 } from './dataDef';
 
