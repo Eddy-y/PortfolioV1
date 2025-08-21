@@ -15,7 +15,6 @@ export interface HomepageMeta {
   twitterUrl?: string;
   twitterDescription?: string;
   twitterImageUrl?: string;
-  
 }
 
 /**
@@ -122,7 +121,7 @@ export interface TestimonialSection {
 }
 
 export interface Testimonial {
-  image?: string; 
+  image?: string | StaticImageData;
   name: string;
   text: string;
 }
@@ -210,7 +209,6 @@ export interface HobbyItem {
   title: string;
   description: string;
   Icon: ForwardRefExoticComponent<Omit<SVGProps<SVGSVGElement>, 'ref'>>; // Add this line
-
 }
 
 export interface HobbiesSection {

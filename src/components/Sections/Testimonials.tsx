@@ -118,9 +118,9 @@ const Testimonial: FC<{testimonial: Testimonial; isActive: boolean}> = memo(
   ({testimonial: {text, name, image}, isActive}) => {
     const resolvedImageSrc = useMemo(() => {
       if (!image) return undefined;
-      return typeof image === 'string' ? image : (image as any).src;
+      return typeof image === 'string' ? image : image.src;
     }, [image]);
-    
+
     return (
       <div
         className={classNames(
@@ -130,7 +130,7 @@ const Testimonial: FC<{testimonial: Testimonial; isActive: boolean}> = memo(
         {resolvedImageSrc ? (
           <div className="relative h-14 w-14 shrink-0 sm:h-16 sm:w-16">
             <QuoteIcon className="absolute -left-2 -top-2 h-4 w-4 stroke-black text-white" />
-            <img className="h-full w-full rounded-full" src={resolvedImageSrc} alt={`${name} testimonial`} />
+            <img alt={`${name} testimonial`} className="h-full w-full rounded-full" src={resolvedImageSrc} />
           </div>
         ) : (
           <QuoteIcon className="h-5 w-5 shrink-0 text-white sm:h-8 sm:w-8" />

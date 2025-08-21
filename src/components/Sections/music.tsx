@@ -3,10 +3,10 @@
 import classNames from 'classnames';
 import Image from 'next/image';
 import {FC, memo, useCallback, useMemo, useRef, useState} from 'react';
-import useInterval from '../../hooks/useInterval';
 
-import {MusicCarouselSection, Song} from '../../data/dataDef';
 import {SectionId} from '../../data/data';
+import {MusicCarouselSection, Song} from '../../data/dataDef';
+import useInterval from '../../hooks/useInterval';
 import Section from '../Layout/Section_Resume';
 
 const MusicCarousel: FC<{musicCarouselData: MusicCarouselSection}> = memo(({musicCarouselData}) => {
@@ -25,12 +25,10 @@ const MusicCarousel: FC<{musicCarouselData: MusicCarouselSection}> = memo(({musi
   useInterval(goToNext, 5000); // Auto-scroll every 5 seconds
 
   const songItems = useMemo(() => {
-    return songs.map((song, index) => (
-      <SongItem key={index} song={song} />
-    ));
+    return songs.map((song, index) => <SongItem key={index} song={song} />);
   }, [songs]);
   const itemsToShow = 3;
-  const transformValue = `translateX(-${(activeIndex * (100 / itemsToShow))}%)`;
+  const transformValue = `translateX(-${activeIndex * (100 / itemsToShow)}%)`;
 
   return (
     <Section className="backgroundColor" sectionId={SectionId.Music}>
@@ -38,33 +36,34 @@ const MusicCarousel: FC<{musicCarouselData: MusicCarouselSection}> = memo(({musi
         <h2 className="self-center title">{title}</h2>
         <div className="relative overflow-hidden">
           <div
+            className={classNames('flex transition-transform duration-500 ease-in-out')}
             ref={scrollContainer}
-            className={classNames(
-              'flex transition-transform duration-500 ease-in-out'
-            )}
             style={{
-              width: `${songs.length * 100 / 4}%`,
-              transform: transformValue
+              width: `${(songs.length * 100) / 4}%`,
+              transform: transformValue,
             }}>
             {songItems}
           </div>
-          <button className="absolute top-1/2 left-0 -translate-y-1/2 bg-gray-700/50 p-2 rounded-full text-white" onClick={goToPrev}>
+          <button
+            className="absolute top-1/2 left-0 -translate-y-1/2 bg-gray-700/50 p-2 rounded-full text-white"
+            onClick={goToPrev}>
             &lt;
           </button>
-          <button className="absolute top-1/2 right-0 -translate-y-1/2 bg-gray-700/50 p-2 rounded-full text-white" onClick={goToNext}>
+          <button
+            className="absolute top-1/2 right-0 -translate-y-1/2 bg-gray-700/50 p-2 rounded-full text-white"
+            onClick={goToNext}>
             &gt;
           </button>
         </div>
         <div className="flex justify-center gap-x-2">
           {songs.map((_, index) => (
             <button
-              key={index}
               className={classNames(
                 'h-3 w-3 rounded-full bg-gray-300 transition-all duration-500',
-                activeIndex === index ? 'scale-100 opacity-100' : 'scale-75 opacity-60'
+                activeIndex === index ? 'scale-100 opacity-100' : 'scale-75 opacity-60',
               )}
-              onClick={() => setActiveIndex(index)}
-            ></button>
+              key={index}
+              onClick={() => setActiveIndex(index)}></button>
           ))}
         </div>
       </div>
@@ -74,14 +73,14 @@ const MusicCarousel: FC<{musicCarouselData: MusicCarouselSection}> = memo(({musi
 
 const SongItem: FC<{song: Song}> = memo(({song}) => {
   return (
-    <a href={song.spotifyUrl} target="_blank" rel="noopener noreferrer" className="block p-4 flex-shrink-0" style={{width: `33.3333%`}}>
+    <a
+      className="block p-4 flex-shrink-0"
+      href={song.spotifyUrl}
+      rel="noopener noreferrer"
+      style={{width: `33.3333%`}}
+      target="_blank">
       <div className="relative w-full aspect-square rounded-lg overflow-hidden shadow-xl">
-        <Image 
-          src={song.imageSrc} 
-          alt={song.name} 
-          layout="fill"
-          objectFit="cover"
-        />
+        <Image alt={song.name} layout="fill" objectFit="cover" src={song.imageSrc} />
       </div>
       <div className="text-center mt-4 text-white">
         <p className="font-bold">{song.name}</p>

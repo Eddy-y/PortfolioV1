@@ -5,8 +5,7 @@ import Section from '../../Layout/Section_Resume';
 import ResumeSection from './ResumeSection';
 import {SkillGroup} from './Skills';
 import TimelineItem from './TimelineItem';
-//import {AdditionalSkills} from './AdditionalSkills'; 
-
+//import {AdditionalSkills} from './AdditionalSkills';
 
 const Resume: FC = memo(() => {
   return (
@@ -41,7 +40,7 @@ const Resume: FC = memo(() => {
             </ResumeSection>
           </div>
         </div>
-          {/* <ResumeSection title="Stack">
+        {/* <ResumeSection title="Stack">
               <AdditionalSkills additionalSkills={additionalSkills} />
             </ResumeSection> */}
       </div>

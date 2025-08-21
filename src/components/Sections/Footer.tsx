@@ -5,7 +5,6 @@ import {FC, memo} from 'react';
 import {SectionId} from '../../data/data';
 import Socials from '../Socials';
 
-
 const currentYear = new Date().getFullYear();
 
 const Footer: FC<{className?: string}> = memo(({className}) => (
@@ -21,9 +20,8 @@ const Footer: FC<{className?: string}> = memo(({className}) => (
       <div className="flex gap-x-4 text-neutral-500">
         <Socials />
       </div>
-      
-      <span className="text-sm text-neutral-700">All rights reserved @ Eduardo Lara {currentYear}</span> 
-      
+
+      <span className="text-sm text-neutral-700">All rights reserved @ Eduardo Lara {currentYear}</span>
     </div>
   </div>
 ));

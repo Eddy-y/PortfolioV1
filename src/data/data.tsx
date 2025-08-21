@@ -3,93 +3,94 @@ import {
   ArrowDownTrayIcon,
   BuildingOffice2Icon,
   CalendarIcon,
-  FlagIcon,
-  MapIcon,
-  SparklesIcon,
-  PuzzlePieceIcon,
-  GlobeAsiaAustraliaIcon,
-  UsersIcon,
   CodeBracketIcon,
-  FireIcon
+  FireIcon,
+  FlagIcon,
+  GlobeAsiaAustraliaIcon,
+  MapIcon,
+  PuzzlePieceIcon,
+  SparklesIcon,
+  UsersIcon,
 } from '@heroicons/react/24/outline';
+
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import MailIcon from '../components/Icon/MailIcon';
-import heroImage from '../images/VolleyballBack.jpg';
-//DISPLAY PROJECT IMAGES
-import RAG_img from '../images/portfolio/RAG.png';
-import estimator_img from '../images/portfolio/Estimator.png';
-import thunder_img from '../images/portfolio/Thunder2.jpg';
-import chucho_img from '../images/portfolio/Chucho.jpg';
-import chai_img from '../images/portfolio/Chai.jpg';
-import optic_img from '../images/portfolio/Optic.png';
-import bellabeat_img from '../images/portfolio/Bellabeat.png';
-//SPECIFIC PROJECT IMAGES
-import bookshelf_img from '../images/Projects/bookshelf.png';
-import book_img from '../images/Projects/book.png';
-import glasses_img from '../images/Projects/Glasses.png';
-import watch_img from '../images/Projects/Watch.png';
-import javascript from '../images/stack/javascript.png';
-import c from '../images/stack/c.png';
-import python from '../images/stack/python.png';
-import java from '../images/stack/java.png';
-import r from '../images/stack/r.png';
-import html from '../images/stack/html.png';
-import css from '../images/stack/css.png';
-import bootstrap from '../images/stack/bootstrap.png';
-import pinecone from '../images/stack/pinecone.png';
-import langchain from '../images/stack/langchain.png';
-import pytorch from '../images/stack/python.png';
-import pandas from '../images/stack/pandas.png';
-import numpy from '../images/stack/numpy.png';
-import matplotlib from '../images/stack/matplotlib.png';
-import streamlit from '../images/stack/streamlit.png';
-import scikit from '../images/stack/scikit.png';
-import sqlserver from '../images/stack/sqlserver.png';
-import postgresql from '../images/stack/postgresql.png';
-import mysql from '../images/stack/mysql.png';
-import mongodb from '../images/stack/mongodb.png';
-import git from '../images/stack/git.png';
-import github from '../images/stack/github.png';
-import vscode from '../images/stack/vscode.png';
-import postman from '../images/stack/postman.png';
-import intellij from '../images/stack/intellij.png';
-import netbeans from '../images/stack/netbeans.png';
-import azure from '../images/stack/azure.png';
-import aws from '../images/stack/aws.png';
-import docker from '../images/stack/docker.png';
-import openai from '../images/stack/openai.png';
-import huggingface from '../images/stack/huggingface.png';
-import jupyter from '../images/stack/jupyter.png';
-import dieWithASmileImage from '../images/songs/DieWithASmile.png';
-import zenzenzenseImage from '../images/songs/Zenzenzense.jpg';
-import theNightsImage from '../images/songs/TheNights.jpg';
-import testDriveImage from '../images/songs/TestDrive.jpg';
-import profilepic from '../images/me.jpg';
-import testimonialImage from '../images/Chess2.jpg';
-import fuegoleonImage from '../images/quotes/fuegoleon.jpg';
-import morganFreemanImage from '../images/quotes/freeman.jpg';
-import violetEvergardenImage from '../images/quotes/violet.png';
-import RAGDescription from '../components/Sections/Portfolio/ProjectDescriptions/RagProject';
+import BellabeatDescription from '../components/Sections/Portfolio/ProjectDescriptions/BellabeatProject';
 import EstimatorDescription from '../components/Sections/Portfolio/ProjectDescriptions/EstimatorProject';
 import OptikDescription from '../components/Sections/Portfolio/ProjectDescriptions/OpticProject';
-import BellabeatDescription from '../components/Sections/Portfolio/ProjectDescriptions/BellabeatProject';
+import RAGDescription from '../components/Sections/Portfolio/ProjectDescriptions/RagProject';
+import testimonialImage from '../images/Chess2.jpg';
+import profilepic from '../images/me.jpg';
+import bellabeat_img from '../images/portfolio/Bellabeat.png';
+import chai_img from '../images/portfolio/Chai.jpg';
+import chucho_img from '../images/portfolio/Chucho.jpg';
+import estimator_img from '../images/portfolio/Estimator.png';
+import optic_img from '../images/portfolio/Optic.png';
+//DISPLAY PROJECT IMAGES
+import RAG_img from '../images/portfolio/RAG.png';
+import thunder_img from '../images/portfolio/Thunder2.jpg';
+import book_img from '../images/Projects/book.png';
+//SPECIFIC PROJECT IMAGES
+import bookshelf_img from '../images/Projects/bookshelf.png';
+import glasses_img from '../images/Projects/Glasses.png';
+import watch_img from '../images/Projects/Watch.png';
+import morganFreemanImage from '../images/quotes/freeman.jpg';
+import fuegoleonImage from '../images/quotes/fuegoleon.jpg';
+import violetEvergardenImage from '../images/quotes/violet.png';
+import dieWithASmileImage from '../images/songs/DieWithASmile.png';
+import testDriveImage from '../images/songs/TestDrive.jpg';
+import theNightsImage from '../images/songs/TheNights.jpg';
+import zenzenzenseImage from '../images/songs/Zenzenzense.jpg';
+import aws from '../images/stack/aws.png';
+import azure from '../images/stack/azure.png';
+import bootstrap from '../images/stack/bootstrap.png';
+import c from '../images/stack/c.png';
+import css from '../images/stack/css.png';
+import docker from '../images/stack/docker.png';
+import git from '../images/stack/git.png';
+import github from '../images/stack/github.png';
+import html from '../images/stack/html.png';
+import huggingface from '../images/stack/huggingface.png';
+import intellij from '../images/stack/intellij.png';
+import java from '../images/stack/java.png';
+import javascript from '../images/stack/javascript.png';
+import jupyter from '../images/stack/jupyter.png';
+import langchain from '../images/stack/langchain.png';
+import matplotlib from '../images/stack/matplotlib.png';
+import mongodb from '../images/stack/mongodb.png';
+import mysql from '../images/stack/mysql.png';
+import netbeans from '../images/stack/netbeans.png';
+import numpy from '../images/stack/numpy.png';
+import openai from '../images/stack/openai.png';
+import pandas from '../images/stack/pandas.png';
+import pinecone from '../images/stack/pinecone.png';
+import postgresql from '../images/stack/postgresql.png';
+import postman from '../images/stack/postman.png';
+import python from '../images/stack/python.png';
+import pytorch from '../images/stack/pytorch.png';
+import r from '../images/stack/r.png';
+import scikit from '../images/stack/scikit.png';
+import sqlserver from '../images/stack/sqlserver.png';
+import streamlit from '../images/stack/streamlit.png';
+import vscode from '../images/stack/vscode.png';
+import heroImage from '../images/VolleyballBack.jpg';
 import {
   About,
   AdditionalSkillSection,
   ContactSection,
   ContactType,
   Hero,
+  HobbiesSection,
   HomepageMeta,
+  MusicCarouselSection,
   PortfolioItem,
   SkillGroup,
   Social,
   StackSection,
   TestimonialSection,
   TimelineItem,
-  MusicCarouselSection,
-  HobbiesSection,
 } from './dataDef';
 
 /**
@@ -97,7 +98,7 @@ import {
  */
 export const homePageMeta: HomepageMeta = {
   title: "Eddie's Portfolio",
-  description: "My Portfolio Site",
+  description: 'My Portfolio Site',
 };
 
 /**
@@ -128,12 +129,13 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        A <strong className="text-stone-100"> Computer Science student</strong> by day, and <strong className="text-stone-100">Data Analyst</strong> by night. 
-        I'm currently working and helping faculty with research at <strong className="text-stone-100">Texas A&M University - SA</strong> campus. 
+        A <strong className="text-stone-100"> Computer Science student</strong> by day, and{' '}
+        <strong className="text-stone-100">Data Analyst</strong> by night. I'm currently working and helping faculty
+        with research at <strong className="text-stone-100">Texas A&M University - SA</strong> campus.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time, you'll see me playing <strong className="text-stone-100">Volleyball</strong>,
-        enjoying a <strong className="text-stone-100">Chess</strong> match, or definitely spending time with my{' '}
+        In my free time, you'll see me playing <strong className="text-stone-100">Volleyball</strong>, enjoying a{' '}
+        <strong className="text-stone-100">Chess</strong> match, or definitely spending time with my{' '}
         <strong className="text-stone-100">5 dogs</strong>.
       </p>
     </>
@@ -193,7 +195,7 @@ export const skills: SkillGroup[] = [
       },
     ],
   },
-    {
+  {
     name: 'Soft',
     skills: [
       {
@@ -244,8 +246,6 @@ export const skills: SkillGroup[] = [
       },
     ],
   },
-
-  
 ];
 
 /**
@@ -254,24 +254,23 @@ export const skills: SkillGroup[] = [
 export const additionalSkills: AdditionalSkillSection = {
   title: '',
   skills: [
-    { name: 'Python', color: 'bg-green-500' },
-    { name: 'Java', color: 'bg-teal-500' },
-    { name: 'R', color: 'bg-amber-500' },
-    { name: 'Azure Data Factory', color: 'bg-purple-500' },
-    { name: 'SQL', color: 'bg-stone-500' },
-    { name: 'Docker', color: 'bg-blue-500' },
-    { name: 'Microsoft Power BI', color: 'bg-cyan-500' },
-    { name: 'Pandas', color: 'bg-red-500' },
-    { name: 'Scikit-learn', color: 'bg-orange-600' },
-    { name: 'JavaScript', color: 'bg-cyan-400' },
-    { name: 'HTML/CSS', color: 'bg-orange-600' },
-    { name: 'AWS Lambda', color: 'bg-amber-500' },
-    { name: 'S3 Bucket', color: 'bg-slate-400' },
-    { name: 'Pinecone', color: 'bg-blue-600' },
-    { name: 'Git', color: 'bg-red-700' },
+    {name: 'Python', color: 'bg-green-500'},
+    {name: 'Java', color: 'bg-teal-500'},
+    {name: 'R', color: 'bg-amber-500'},
+    {name: 'Azure Data Factory', color: 'bg-purple-500'},
+    {name: 'SQL', color: 'bg-stone-500'},
+    {name: 'Docker', color: 'bg-blue-500'},
+    {name: 'Microsoft Power BI', color: 'bg-cyan-500'},
+    {name: 'Pandas', color: 'bg-red-500'},
+    {name: 'Scikit-learn', color: 'bg-orange-600'},
+    {name: 'JavaScript', color: 'bg-cyan-400'},
+    {name: 'HTML/CSS', color: 'bg-orange-600'},
+    {name: 'AWS Lambda', color: 'bg-amber-500'},
+    {name: 'S3 Bucket', color: 'bg-slate-400'},
+    {name: 'Pinecone', color: 'bg-blue-600'},
+    {name: 'Git', color: 'bg-red-700'},
   ],
 };
-
 
 /**
  * Resume section -- TODO: Standardize resume contact format or offer MDX
@@ -284,7 +283,12 @@ export const education: TimelineItem[] = [
     /*content: <p>At TAMUSA, I was a member of the Honors Society and the Chess Club, and I also served as the captain of 
       the men's volleyball team. My time there allowed me to broaden my horizons and explore new technologies and 
       platforms, such as Azure, and dive into new concepts like machine learning.</p>,*/
-      content:<p>4.0 GPA | Honors Society | Men's Volleyball Team Captain and Vicepresident | Chess Team Member | Research Assistant</p>,
+    content: (
+      <p>
+        4.0 GPA | Honors Society | Men's Volleyball Team Captain and Vicepresident | Chess Team Member | Research
+        Assistant
+      </p>
+    ),
   },
   {
     date: 'July 2023',
@@ -294,7 +298,7 @@ export const education: TimelineItem[] = [
       solid foundation for my understanding of fundamentals like databases and REST controllers, primarily using Java.
       It was here, under the guidance of my ever so feared database professor and her challenging SQL assignments,
       that I discovered my passion for working with data.</p>,*/
-      content:<p>3.8 GPA | Men's Volleyball Team Subcaptain | Class Representative</p>,
+    content: <p>3.8 GPA | Men's Volleyball Team Subcaptain | Class Representative</p>,
   },
 ];
 
@@ -316,13 +320,22 @@ export const experience: TimelineItem[] = [
     content: (
       <div>
         <ul>
-          <li>Built a <strong>Retrieval Augmented Generation (RAG) system</strong> using OpenAI models, <strong> python, Pinecone, and Langchain</strong>. This system automated
-          project requirements estimation, which <strong>reduced</strong> the estimation process by <strong>90%</strong> and saved weeks
-          in the project flow.</li>
-          <li>Developed a <strong>custom AI assistant</strong> using OpenAI models, which provided real-time project updates and
-          insights to the team, improving communication and decision-making.</li>
+          <li>
+            Built a <strong>Retrieval Augmented Generation (RAG) system</strong> using OpenAI models,{' '}
+            <strong> python, Pinecone, and Langchain</strong>. This system automated project requirements estimation,
+            which <strong>reduced</strong> the estimation process by <strong>90%</strong> and saved weeks in the project
+            flow.
+          </li>
+          <li>
+            Developed a <strong>custom AI assistant</strong> using OpenAI models, which provided real-time project
+            updates and insights to the team, improving communication and decision-making.
+          </li>
         </ul>
-        <p> This work got the initiative to integrate AI into enterprise workflows going, resulting in the company's first successful implementation of AI within project planning.</p>
+        <p>
+          {' '}
+          This work got the initiative to integrate AI into enterprise workflows going, resulting in the company's first
+          successful implementation of AI within project planning.
+        </p>
       </div>
     ),
   },
@@ -333,9 +346,17 @@ export const experience: TimelineItem[] = [
     content: (
       <div>
         <ul>
-          <li>Used machine learning models to generate predictions on machinery failure for a client, and created charts and visualizations to communicate the findings.</li>
-          <li>Helped developing a RESTful API for secure digital signature verification, which ensured document integrity.</li>
-          <li>Integrated the Interplanetary File System (IPFS) with AWS S3 and Lambda to enable decentralized and permanent file storage for NFT management.</li>
+          <li>
+            Used machine learning models to generate predictions on machinery failure for a client, and created charts
+            and visualizations to communicate the findings.
+          </li>
+          <li>
+            Helped developing a RESTful API for secure digital signature verification, which ensured document integrity.
+          </li>
+          <li>
+            Integrated the Interplanetary File System (IPFS) with AWS S3 and Lambda to enable decentralized and
+            permanent file storage for NFT management.
+          </li>
         </ul>
       </div>
     ),
@@ -347,14 +368,20 @@ export const experience: TimelineItem[] = [
     content: (
       <div>
         <ul>
-          <li>Automated 5+ ETL pipelines using Azure Data Factory and SQL Server, securing data from diverse sources.</li>
-          <li>Created a Power BI dashboard to visualize and analyze data from a client’s database, which helped identify trends and insights.</li>
-          <li>Developed and enhanced 10+ Power BI dashboards, providing performance insights into ticket resolution.</li>
+          <li>
+            Automated 5+ ETL pipelines using Azure Data Factory and SQL Server, securing data from diverse sources.
+          </li>
+          <li>
+            Created a Power BI dashboard to visualize and analyze data from a client’s database, which helped identify
+            trends and insights.
+          </li>
+          <li>
+            Developed and enhanced 10+ Power BI dashboards, providing performance insights into ticket resolution.
+          </li>
         </ul>
       </div>
     ),
   },
-  
 ];
 
 /**
@@ -363,72 +390,74 @@ export const experience: TimelineItem[] = [
 export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Retrieval-augmented generation',
-    description: 'Python-based RAG app that lets users upload documents and ask questions. The LLM uses the uploaded files as a knowledge base to generate context-aware responses.',
-    fullDescription:<RAGDescription />,
-    slug:'Rag',
+    description:
+      'Python-based RAG app that lets users upload documents and ask questions. The LLM uses the uploaded files as a knowledge base to generate context-aware responses.',
+    fullDescription: <RAGDescription />,
+    slug: 'Rag',
     image: RAG_img,
-    images:[bookshelf_img],
-    technologies: ['Python','Pinecone', 'OpenAI','Langchain'],
-    repoUrl:'https://github.com/Eddy-y/RAG_PoC_Public',
-    year: '2024'
+    images: [bookshelf_img],
+    technologies: ['Python', 'Pinecone', 'OpenAI', 'Langchain'],
+    repoUrl: 'https://github.com/Eddy-y/RAG_PoC_Public',
+    year: '2024',
   },
 
   {
     title: 'Thunder',
     description: '',
-    slug:'Thunder',
+    slug: 'Thunder',
     image: thunder_img,
     noClick: true,
   },
 
   {
     title: 'Automated Project Estimator',
-    description: 'A Streamlit application that uses a fine-tuned OpenAI assistant to generate functional requirements, assisting with project planning.',
-    fullDescription:<EstimatorDescription />,
-    slug:'Estimator',
+    description:
+      'A Streamlit application that uses a fine-tuned OpenAI assistant to generate functional requirements, assisting with project planning.',
+    fullDescription: <EstimatorDescription />,
+    slug: 'Estimator',
     image: estimator_img,
-    images:[book_img],
-    technologies:['Python','Streamlit','OpenAI','Pandas'],
-    repoUrl:'https://github.com/Eddy-y/ProjectEstimatorPublic',
-    year: '2024'
+    images: [book_img],
+    technologies: ['Python', 'Streamlit', 'OpenAI', 'Pandas'],
+    repoUrl: 'https://github.com/Eddy-y/ProjectEstimatorPublic',
+    year: '2024',
   },
   {
     title: 'Chucho',
     description: '',
-    slug:'Chucho',
+    slug: 'Chucho',
     image: chucho_img,
     noClick: true,
   },
   {
     title: 'Optica-Qualite System',
-    description: 'Data management platform that allows employees to manage client data, product inventory, sales, and payments efficiently.',
-    fullDescription:<OptikDescription />,
-    slug:'Optik',
+    description:
+      'Data management platform that allows employees to manage client data, product inventory, sales, and payments efficiently.',
+    fullDescription: <OptikDescription />,
+    slug: 'Optik',
     image: optic_img,
-    images:[glasses_img],
-    technologies:['Html','Java','MySQL','Javascript'],
-    repoUrl:'https://github.com/Eddy-y/optik.git',
-    year: '2023'
+    images: [glasses_img],
+    technologies: ['Html', 'Java', 'MySQL', 'Javascript'],
+    repoUrl: 'https://github.com/Eddy-y/optik.git',
+    year: '2023',
   },
   {
     title: 'Chai',
     description: '',
-    slug:'Chai',
+    slug: 'Chai',
     image: chai_img,
     noClick: true,
-  },  
+  },
   {
     title: 'Bellabeat Study Case',
-    description: 'Data analysis of smart device usage to inform Bellabeat\'s marketing strategy.',
-    fullDescription:<BellabeatDescription />,
-    slug:'Bellabeat',
+    description: "Data analysis of smart device usage to inform Bellabeat's marketing strategy.",
+    fullDescription: <BellabeatDescription />,
+    slug: 'Bellabeat',
     image: bellabeat_img,
-    images:[watch_img],
-    technologies:['R','Tidyverse','ggplot2','Data'],
-    repoUrl:'https://www.kaggle.com/code/eduardolarahurtado/bellabeat-s-study-case',
-    year: '2023'
+    images: [watch_img],
+    technologies: ['R', 'Tidyverse', 'ggplot2', 'Data'],
+    repoUrl: 'https://www.kaggle.com/code/eduardolarahurtado/bellabeat-s-study-case',
+    year: '2023',
   },
-  
 ];
 
 /**
@@ -502,7 +531,6 @@ export const stackSection: StackSection = {
         {name: 'OpenAI API', imageSrc: openai},
         {name: 'LangChain', imageSrc: langchain},
         {name: 'HuggingFace', imageSrc: huggingface},
-
       ],
     },
   ],
@@ -571,9 +599,8 @@ export const socialLinks: Social[] = [
   /*{label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},*/
   {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/eduardo-lara-hurtado-612233281/'},
   {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/eddy_larah/'},
-  {label: 'Email', Icon: MailIcon, href: "mailto:eduardolh383@gmail.com"}
+  {label: 'Email', Icon: MailIcon, href: 'mailto:eduardolh383@gmail.com'},
 ];
-
 
 /**
  * Music Carousel section
@@ -605,7 +632,6 @@ export const musicCarouselData: MusicCarouselSection = {
       imageSrc: zenzenzenseImage,
       spotifyUrl: 'https://open.spotify.com/track/2DLrgv7HhJanCuD8L9uJLR?si=f89c59f4dba24dcc',
     },
-    
   ],
 };
 
