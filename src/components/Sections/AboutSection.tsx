@@ -18,7 +18,7 @@ import {Button} from '../UI/button';
 import {Card, CardContent} from '../UI/card';
 
 const AboutSection: FC = memo(() => {
-  const resumeUrl = '/assets/resume.pdf';
+  const resumeUrl = '/assets/EduardoLara_Resume.pdf';
   const {toast} = useToast();
   const {description} = aboutData;
 
