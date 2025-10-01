@@ -38,7 +38,7 @@ import glasses_img from '../images/Projects/Glasses.png';
 import watch_img from '../images/Projects/Watch.png';
 import ShawnImage from '../images/quotes/Shawn.jpg';
 import JosephImage from '../images/quotes/Joseph.jpg';
-import violetEvergardenImage from '../images/quotes/violet.png';
+//import violetEvergardenImage from '../images/quotes/violet.png';
 import dieWithASmileImage from '../images/Songs/DieWithASmile.png';
 import testDriveImage from '../images/Songs/TestDrive.jpg';
 import theNightsImage from '../images/Songs/TheNights.jpg';
