@@ -36,8 +36,8 @@ import book_img from '../images/Projects/book.png';
 import bookshelf_img from '../images/Projects/bookshelf.png';
 import glasses_img from '../images/Projects/Glasses.png';
 import watch_img from '../images/Projects/Watch.png';
-import morganFreemanImage from '../images/quotes/freeman.jpg';
-import fuegoleonImage from '../images/quotes/fuegoleon.jpg';
+import ShawnImage from '../images/quotes/Shawn.jpg';
+import JosephImage from '../images/quotes/Joseph.jpg';
 import violetEvergardenImage from '../images/quotes/violet.png';
 import dieWithASmileImage from '../images/Songs/DieWithASmile.png';
 import testDriveImage from '../images/Songs/TestDrive.jpg';
@@ -543,20 +543,20 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'Fuegoleon Vermillion',
-      text: 'Being weak is nothing to be ashamed of. Staying weak is',
-      image: fuegoleonImage,
+      name: 'Joseph Mumanga  | Innovation & Research Director',
+      text: 'I have no doubt that he will bring the same level of dedication and innovation to any academic or professional endeavor he chooses to pursue.',
+      image: JosephImage,
     },
     {
-      name: 'Morgan Freeman',
-      text: 'If someone prays for patience, you think God gives them patience? Or does he give them the opportunity to be patient? If he prayed for courage, does God give him courage, or does he give him opportunities to be courageous?',
-      image: morganFreemanImage,
+      name: 'Shawn Hamilton | Managing Principal',
+      text: 'Communication was effortless from start to finish. I never had to chase for an update on the building of the site. It was a completely stress-free experience.',
+      image: ShawnImage,
     },
-    {
-      name: 'Violet Evergarden',
-      text: 'Dead people receive more flowers than living ones because regret is stronger than gratitude.',
-      image: violetEvergardenImage,
-    },
+    // {
+    //   name: 'Violet Evergarden',
+    //   text: 'Dead people receive more flowers than living ones because regret is stronger than gratitude.',
+    //   image: violetEvergardenImage,
+    // },
   ],
 };
 
